@@ -1,0 +1,5 @@
+30755;UZB 232E;Cemil  Kurtcebe;40;['Pazartesi ', 'Salý '];['0830/1129 ', '0830/1129 '];['D214 ', 'D214 '];['UCK', ' UCKE', ' UZB', ' UZBE']
+30467;UZB 331E;Ýbrahim  Özkol;30;['Pazartesi ', 'Cuma '];['1130/1429 ', '0930/1229 '];['D-Z08 ', 'D-Z08 '];['UCK', ' UCKE', ' UZB', ' UZBE']
+30620;UZB 362E;Hayri  Acar;40;['Çarþamba ', 'Perþembe '];['0930/1329 ', '0930/1329 '];['D216 ', 'D216 '];['UCK', ' UCKE', ' UCKM', ' UZB', ' UZBE', ' UZBM']
+30740;UZB 362E;Hayri  Acar;20;['Cuma ', 'Cuma '];['0830/1229 ', '1330/1729 '];['D216 ', 'D216 '];['UCK', ' UCKE', ' UCKM', ' UZB', ' UZBE', ' UZBM']
+30465;UZB 421E;Cengiz  Hacýzade;33;['Pazartesi ', 'Salý '];['0830/1129 ', '0830/1129 '];['D-Z09 ', 'D-Z09 '];['KOM', ' KOME', ' UZB', ' UZBE', ' UZBM']

@@ -1,0 +1,4 @@
+30738;PEM 248E;Fatma Ayçim Türer Baþkaya;15;['Çarþamba ', 'Çarþamba '];['0830/1229 ', '1330/1729 '];['217B ', '217B '];['PEM', ' PEME']
+30509;PEM 311E;Fatma Ayçim Türer Baþkaya;12;['Salý ', 'Salý ', 'Perþembe ', 'Perþembe '];['0830/1229 ', '1330/1729 ', '0830/1229 ', '1330/1729 '];['214 ', '214 ', '214 ', '214 '];['PEM', ' PEME']
+30511;PEM 312E;Fatma Ayçim Türer Baþkaya;12;['Salý ', 'Salý ', 'Perþembe ', 'Perþembe '];['0830/1229 ', '1330/1729 ', '0830/1229 ', '1330/1729 '];['214 ', '214 ', '214 ', '214 '];['PEM', ' PEME']
+30606;PEM 316E;Gülþen  Aytaç;30;['Çarþamba ', 'Çarþamba '];['0930/1229 ', '1330/1629 '];['214 ', '214 '];['PEM', ' PEME', ' PEMM']

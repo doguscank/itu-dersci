@@ -1,0 +1,5 @@
+30422;GEM 211E;Metin  Taylan;30;['Perþembe ', 'Perþembe '];['0930/1229 ', '1330/1629 '];['R409 ', 'R409 '];['DEN', ' DENE', ' GEM', ' GEME', ' GEMK']
+30423;GEM 321E;Metin  Taylan;60;['Pazartesi ', 'Pazartesi '];['0830/1229 ', '1330/1729 '];['410 ', '410 '];['GEM', ' GEME', ' GEMK']
+30427;GEM 331E;Erdem  Üçer;30;['Perþembe ', 'Perþembe '];['1030/1229 ', '1330/1529 '];['D311 ', 'D311 '];['GEME', ' GEMK']
+30425;GEM 342E;Þebnem  Helvacýoðlu;25;['Pazartesi ', 'Çarþamba '];['0930/1229 ', '1330/1629 '];['D308 ', 'D308 '];['GEM', ' GEME', ' GEMK', ' GEMM']
+30426;GEM 412E;Erdem  Üçer;30;['Çarþamba ', 'Çarþamba '];['1030/1229 ', '1330/1529 '];['D304 ', 'D304 '];['DEN', ' DENE', ' GEM', ' GEME', ' GEMK']

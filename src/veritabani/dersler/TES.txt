@@ -1,0 +1,6 @@
+30535;TES 112E;Sema  Alaçam;20;['Cuma ', 'Cuma '];['0830/1229 ', '1330/1729 '];['217C ', '217C '];['EUT', ' EUTE', ' ICM', ' MIM', ' MIME', ' PEM', ' PEME', ' SBP', ' SBPE']
+30516;TES 113E;Bahadýr  Numan;20;['Çarþamba ', 'Çarþamba '];['0830/1229 ', '1330/1729 '];['3400 ', '3400 '];['EUT', ' EUTE', ' ICM', ' MIM', ' MIME', ' PEM', ' PEME', ' SBP', ' SBPE']
+30537;TES 113E;Oðuz  Haþlakoðlu;20;['Çarþamba ', 'Çarþamba '];['0830/1229 ', '1330/1729 '];['203A ', '203A '];['EUT', ' EUTE', ' ICM', ' MIM', ' MIME', ' PEM', ' PEME', ' SBP', ' SBPE']
+30520;TES 121E;Hasan Serdar Kaya;20;['Pazartesi ', 'Pazartesi ', 'Perþembe ', 'Perþembe '];['0830/1229 ', '1330/1729 ', '0830/1229 ', '1330/1729 '];['227A ', '227A ', '227A ', '227A '];['EUT', ' EUTE', ' ICM', ' MIM', ' MIME', ' PEM', ' PEME', ' SBP', ' SBPE']
+30538;TES 121E;Aslý  Çekmiþ;20;['Pazartesi ', 'Pazartesi ', 'Perþembe ', 'Perþembe '];['0830/1229 ', '1330/1729 ', '0830/1229 ', '1330/1729 '];['227B ', '227B ', '227B ', '227B '];['EUT', ' EUTE', ' ICM', ' MIM', ' MIME', ' PEM', ' PEME', ' SBP', ' SBPE']
+30536;TES 122E;Nizam Onur Sönmez;20;['Cuma ', 'Cuma '];['0830/1229 ', '1330/1729 '];['3400 ', '3400 '];['EUT', ' EUTE', ' ICM', ' MIM', ' MIME', ' PEM', ' PEME', ' SBP', ' SBPE']

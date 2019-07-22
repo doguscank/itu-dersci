@@ -1,0 +1,6 @@
+30159;CAB 177;Alper  Rumelioðlu;15;['Pazartesi ', 'Çarþamba '];['1330/1529 ', '1330/1529 '];['--- ', '--- '];['DUI', ' MTR', ' MUT', ' MUZ', ' SES']
+30162;CAB 178;Cenk  Öztürk;19;['Pazartesi ', 'Çarþamba '];['1330/1529 ', '1330/1529 '];['--- ', '--- '];['MTR', ' MUT', ' MUZ', ' SES']
+30161;CAB 277;Alper  Rumelioðlu;15;['Pazartesi ', 'Salý '];['1030/1229 ', '1530/1729 '];['--- ', '--- '];['MTR', ' MUT', ' SES']
+30163;CAB 278;Cenk  Öztürk;15;['Pazartesi ', 'Çarþamba '];['1530/1729 ', '1030/1229 '];['--- ', '--- '];['MTR', ' MUT', ' SES']
+30165;CAB 343;Cenk  Öztürk;15;['Salý ', 'Perþembe '];['1030/1229 ', '1330/1529 '];['--- ', '--- '];['CAB', ' KMP', ' SES']
+30166;CAB 344;Alper  Rumelioðlu;15;['Pazartesi ', 'Perþembe '];['1530/1729 ', '1030/1229 '];['--- ', '--- '];['CAB', ' KMP', ' SES']

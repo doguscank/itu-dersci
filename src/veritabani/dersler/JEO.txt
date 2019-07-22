@@ -1,0 +1,8 @@
+30635;JEO 111;Recep Fahri Esenli;25;['Perþembe ', 'Perþembe '];['0930/1229 ', '1330/1629 '];['A204 ', 'A204 '];['JEO']
+30379;JEO 112;Kürþad Kadir Eriþ;30;['Perþembe ', 'Perþembe '];['0930/1229 ', '1430/1729 '];['A203 ', 'A203 '];['JEO', ' JEOM', ' MAD', ' MADM']
+30374;JEO 323E;Emin  Çiftçi;15;['Çarþamba ', 'Çarþamba '];['0930/1229 ', '1430/1729 '];['B206 ', 'B206 '];['JEO', ' JEOE']
+30376;JEO 339;Mustafa  Kumral;30;['Çarþamba ', 'Çarþamba '];['0930/1229 ', '1430/1729 '];['B204 ', 'B204 '];['JEO']
+30373;JEO 339E;Emin  Çiftçi;15;['Cuma ', 'Cuma '];['0930/1229 ', '1430/1729 '];['A205 ', 'A205 '];['JEO', ' JEOE']
+30723;JEO 341;Kürþad Kadir Eriþ;20;['Pazartesi ', 'Pazartesi '];['0830/1129 ', '1330/1629 '];['A203 ', 'A203 '];['JEO']
+30380;JEO 348;Kürþad Kadir Eriþ;25;['Cuma ', 'Cuma '];['0930/1229 ', '1430/1729 '];['A203 ', 'A203 '];['JEO']
+30377;JEO 412;Mehmet Sezai Kýrýkoðlu, Demet  Yýldýrým;20;['Pazartesi ', 'Pazartesi '];['0930/1229 ', '1430/1729 '];['B204 ', 'B204 '];['JEO', ' JEOM']

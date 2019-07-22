@@ -1,0 +1,2 @@
+30634;MAD 254E;Akif  Kutlu;30;['Pazartesi ', 'Salý '];['1030/1229 ', '1030/1229 '];['A202 ', 'A201 '];['MAD', ' MADE']
+30368;MAD 318;Murat Olgaç Kangal;40;['Pazartesi ', 'Pazartesi '];['0830/1129 ', '1330/1629 '];['A201 ', 'A201 '];['CHZ', ' MAD', ' MADM']

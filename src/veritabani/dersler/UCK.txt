@@ -1,0 +1,7 @@
+30453;UCK 205E;Ali  Kodal;30;['Çarþamba '];['0830/1229 '];['D213 '];['UCK', ' UZBE']
+30457;UCK 206E;Ali  Kodal;30;['Çarþamba '];['1330/1729 '];['D213 '];['UCK', ' UCKM', ' UZBE', ' UZBM']
+30452;UCK 212E;Ali  Kodal;40;['Pazartesi ', 'Salý '];['1330/1729 ', '1330/1729 '];['D213 ', 'D213 '];['UCK', ' UCKE', ' UCKM', ' UZB', ' UZBE', ' UZBM']
+30468;UCK 351E;Hayri  Acar;40;['Salý ', 'Perþembe '];['1330/1729 ', '1330/1729 '];['D-Z08 ', 'D-Z08 '];['UCK', ' UCKE', ' UZB', ' UZBE']
+30459;UCK 361E;Halit Süleyman Türkmen;55;['Perþembe ', 'Cuma '];['0930/1229 ', '1430/1729 '];['D214 ', 'D214 '];['UCK', ' UCKE', ' UCKM', ' UZB', ' UZBE', ' UZBM']
+30451;UCK 421E;Ali  Kodal;30;['Pazartesi ', 'Salý '];['0830/1129 ', '0830/1129 '];['D213 ', 'D213 '];['UCK', ' UCKE']
+30473;UCK 441E;Hayri  Acar;30;['Salý ', 'Çarþamba '];['0930/1229 ', '1330/1629 '];['D-Z08 ', 'D-Z08 '];['UCK', ' UCKE', ' UCKM']

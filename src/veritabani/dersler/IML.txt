@@ -1,0 +1,1 @@
+30696;IML 318;Ali Ýmre Aydeniz;40;['Çarþamba ', 'Perþembe '];['0830/1229 ', '0830/1229 '];['D359 ', 'D359 '];['IML', ' IMLM']

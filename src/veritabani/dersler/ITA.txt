@@ -1,0 +1,2 @@
+30187;ITA 101;Lina  Calogera;20;['Salý ', 'Çarþamba '];['0830/1229 ', '0830/1229 '];['B308 ', 'B206 '];['Tüm Lisans ve Lisansüstü Programlar']
+30684;ITA 102;Lina  Calogera;20;['Salý ', 'Çarþamba '];['1330/1729 ', '1330/1729 '];['A301 ', 'A301 '];['Tüm Lisans ve Lisansüstü Programlar']

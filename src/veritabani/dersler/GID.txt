@@ -1,0 +1,1 @@
+30752;GID 222;Hatice Funda Karbancýoðlu Güler;35;['Salý ', 'Çarþamba '];['1330/1629 ', '0930/1229 '];['D304 ', 'D304 '];['GID', ' GIDM']

@@ -1,0 +1,3 @@
+30756;STA 201E;Cemil  Kurtcebe;40;['Çarþamba ', 'Çarþamba '];['0830/1129 ', '1430/1729 '];['D110 ', 'D110 '];['DEN', ' DENE', ' EHB', ' EHBE', ' ELE', ' ELH', ' GEM', ' GEME', ' GEMK', ' JEO', ' JEOE', ' MAD', ' MAK', ' MAKE', ' TEK', ' TEL', ' UCK', ' UCKE', ' UCKM', ' UZB', ' UZBE']
+30623;STA 202;Teoman  Özer;30;['Pazartesi ', 'Salý ', 'Çarþamba '];['1230/1529 ', '1230/1529 ', '1230/1429 '];['D203 ', 'D203 ', 'D203 '];['FIZ', ' INS']
+30358;STA 202E;Osman  Bulut;25;['Çarþamba ', 'Perþembe ', 'Cuma '];['0930/1229 ', '1330/1629 ', '1430/1629 '];['B304 ', 'B304 ', 'B304 '];['FIZ', ' FIZE', ' INS', ' INSE']

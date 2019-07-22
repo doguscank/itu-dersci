@@ -1,0 +1,2 @@
+30686;MEK 205E;Hacý Abdullah Taþdemir;40;['Çarþamba ', 'Perþembe '];['1330/1629 ', '0930/1229 '];['D317 ', 'D317 '];['CHZ', ' CHZE', ' END', ' ENDE', ' GID', ' GIDE', ' GMI', ' GMIE', ' GMIK', ' IML', ' IMLE', ' ISL', ' ISLE', ' JEF', ' JEFE', ' JEO', ' JEOE', ' MAD', ' MADE', ' PET', ' PETE', ' TEKE']
+30470;MEK 205E;Münir  Süner;30;['Perþembe ', 'Perþembe '];['0830/1129 ', '1330/1629 '];['--- ', '--- '];['DUI', ' DUIE', ' GMI', ' GMIE']

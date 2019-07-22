@@ -1,0 +1,3 @@
+30712;RES 102;Erdem  Üçer;30;['Pazartesi ', 'Pazartesi '];['0830/1229 ', '1330/1729 '];['--- ', '--- '];['DUI', ' GMI']
+30493;RES 107E;Hacý Mustafa  Özkýrým;40;['Pazartesi ', 'Salý '];['0930/1229 ', '0930/1229 '];['406 ', '406 '];['END', ' ENDE', ' FIZ', ' GID', ' GIDE', ' ISL', ' ISLE', ' KMM', ' KMME', ' MET', ' METE', ' PETE']
+30146;RES 107E;Mehmet Murat Sunar;40;['Çarþamba ', 'Perþembe '];['1030/1329 ', '1030/1329 '];['BIL.LAB1 ', '2106 '];['END', ' ENDE', ' FIZ', ' FIZE', ' GID', ' GIDE', ' ISL', ' ISLE', ' KMM', ' KMME', ' MET', ' METE', ' PETE']

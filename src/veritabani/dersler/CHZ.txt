@@ -1,0 +1,2 @@
+30369;CHZ 318;Murat Olgaç Kangal;30;['Çarþamba ', 'Çarþamba '];['0930/1229 ', '1330/1629 '];['A205 ', 'A205 '];['CHZ', ' CHZM', ' MAD']
+30734;CHZ 421;Abdullah Ekrem Yüce, Feridun  Boylu;20;['Salý ', 'Perþembe '];['1030/1329 ', '1330/1629 '];['A101 ', 'A101 '];['CHZ', ' CHZM']

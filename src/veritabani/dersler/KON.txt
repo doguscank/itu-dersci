@@ -1,0 +1,2 @@
+30345;KON 201E;Gülay  Öke Günel;35;['Pazartesi ', 'Cuma '];['1330/1729 ', '1400/1759 '];['5204 ', '5204 '];['KOM', ' KOME']
+30341;KON 315E;Serhat  Ýkizoðlu;30;['Perþembe ', 'Perþembe '];['0830/1229 ', '1330/1729 '];['5202 ', '5202 '];['KOM', ' KOME']

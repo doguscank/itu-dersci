@@ -1,0 +1,6 @@
+30697;BIO 102E;Süreyya Ergün  Bozdað;60;['Salý ', 'Salý '];['0930/1229 ', '1330/1629 '];['D360 ', 'D360 '];['IML', ' IMLE', ' MAK', ' MAKE']
+30705;BIO 106EL;Deniz  Þahin;10;['Pazartesi ', 'Çarþamba '];['1330/1629 ', '0930/1229 '];['--- ', '--- '];['BIOE', ' BIOM']
+30243;BIO 207EL;Fatma Neþe Kök;30;['Salý ', 'Perþembe '];['0930/1229 ', '0930/1229 '];['--- ', '--- '];['BIO', ' BIOE', ' BIOM']
+30242;BIO 312E;--;0;['Çarþamba ', 'Çarþamba ', 'Cuma ', 'Cuma '];['0930/1229 ', '1330/1629 ', '0930/1229 ', '1330/1629 '];['--- ', '--- ', '--- ', '--- '];['BIO', ' BIOE']
+30703;BIO 315E;Nevin  Gül-Karagüler;20;['Salý ', 'Perþembe '];['0930/1229 ', '0930/1229 '];['101 ', '101 '];['BIO', ' BIOE', ' BIOM']
+30704;BIO 315EL;Nevin  Gül-Karagüler;10;['Salý ', 'Perþembe '];['1330/1629 ', '1330/1629 '];['--- ', '--- '];['BIO', ' BIOE']

@@ -1,0 +1,3 @@
+30371;AKM 204;Birgül  Benli;40;['Salý ', 'Salý '];['0830/1129 ', '1330/1629 '];['A205 ', 'A205 '];['CEV', ' CHZ', ' IML', ' INS', ' KMM', ' PET']
+30754;AKM 204E;Birgül  Benli;50;['Cuma ', 'Cuma '];['0930/1229 ', '1430/1729 '];['A101 ', 'A101 '];['CEV', ' CEVE', ' CHZ', ' CHZE', ' FIZ', ' FIZE', ' GID', ' GIDE', ' IML', ' IMLE', ' INS', ' INSE', ' JEF', ' KMM', ' KMME', ' MAD', ' MTO', ' MTOE', ' PET', ' PETE', ' PETM', ' TEK', ' TEKE', ' UCKM']
+30424;AKM 205;Þakir  Bal;25;['Salý ', 'Salý ', 'Çarþamba ', 'Çarþamba '];['0930/1229 ', '1330/1529 ', '0930/1229 ', '1330/1529 '];['R409 ', 'R409 ', 'R409 ', 'R409 '];['DEN', ' GEM', ' GEMM', ' MAK', ' UCK', ' UZB']
