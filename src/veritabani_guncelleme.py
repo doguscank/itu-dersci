@@ -1,9 +1,19 @@
 from bs4 import BeautifulSoup
 import urllib3
 import ders_class
-from PyQt5.QtWidgets import QDialog, QLabel, QPushButton, QWidget
+import ders_programi_gui as dp_gui
+import os.path
 
-def db_guncelle():
+def db_guncelle(app = None):
+
+	path = os.path.dirname(os.path.abspath(__file__))
+	path_to_check = path + r"\veritabani"
+
+	if not os.path.exists(path_to_check):
+		os.mkdir(path_to_check)
+		os.mkdir(path_to_check + r"\dersler")
+		db_guncelle()
+
 	manager = urllib3.PoolManager(1)
 	url = 'http://www.sis.itu.edu.tr/tr/ders_programlari/LSprogramlar/prg.php?fb=MAT'
 	html = manager.urlopen('GET', url)
@@ -67,12 +77,4 @@ def db_guncelle():
 			f.write(f"{ders.crn};{ders.ad};{ders.hoca};{ders.kontenjan};{ders.gunler};{ders.saatler};{ders.siniflar};{ders.alabilen}\n")
 			f.close()
 
-	update_onay = QDialog()
-	update_onay.setGeometry(400, 200, 240, 100)
-	onay_label = QLabel('Veritabanı başarıyla güncellendi!', update_onay)
-	onay_label.move(35, 20)
-	onay_btn = QPushButton('Tamam', update_onay)
-	onay_btn.move(80, 55)
-	onay_btn.clicked.connect(update_onay.close)
-	update_onay.setModal(True)
-	update_onay.exec_()
+	dp_gui.popup_olustur('Veritabanı başarıyla güncellendi!', 'Tamam')

@@ -168,87 +168,94 @@ def gun_bos_birakma(gun, dersler):
 	return ayiklanmis_dersler
 
 def program_olustur(bolum, dersler, app = None):
-	pzt = gun.Gun("Pazartesi")
-	sali = gun.Gun("Salı")
-	crs = gun.Gun("Çarşamba")
-	prs = gun.Gun("Perşembe")
-	cuma = gun.Gun("Cuma")
-	
-	gunler = [pzt, sali, crs, prs, cuma]
-	gun_adlari = [pzt.ad, sali.ad, crs.ad, prs.ad, cuma.ad]
+	try:
+		pzt = gun.Gun("Pazartesi")
+		sali = gun.Gun("Salı")
+		crs = gun.Gun("Çarşamba")
+		prs = gun.Gun("Perşembe")
+		cuma = gun.Gun("Cuma")
+		
+		gunler = [pzt, sali, crs, prs, cuma]
+		gun_adlari = [pzt.ad, sali.ad, crs.ad, prs.ad, cuma.ad]
 
-	if app == None:
-		ex = dp_gui.DersProgramGUI(gunler)
-		app = ex.get_GUI_app()
+		if app == None:
+			ex = dp_gui.DersProgramGUI(gunler)
+			app = ex.get_GUI_app()
 
-	eklenen_dersler = ders.DersListe([], [], [], [])
-	istenen_ders_adlari = []
-	hashler = []
+		eklenen_dersler = ders.DersListe([], [], [], [])
+		istenen_ders_adlari = []
+		hashler = []
 
-	for _ders in dersler:
-		if not _ders.ad in istenen_ders_adlari:
-			istenen_ders_adlari.append(_ders.ad)
+		for _ders in dersler:
+			if not _ders.ad in istenen_ders_adlari:
+				istenen_ders_adlari.append(_ders.ad)
 
-	for _ders in dersler:
-		alabilir = False
+		_dersler = app.gunleriAyikla(dersler)
 
-		if bolum == "":
-			alabilir = True
-		elif not _ders.alabilen == "['Tüm Lisans ve Lisansüstü Programlar']":
-			alabilen_bolumler = ayirma(_ders.alabilen)
-			if bolum.upper() in alabilen_bolumler:
+		for _ders in _dersler:
+			alabilir = False
+
+			if bolum == "":
 				alabilir = True
-		else:
-			alabilir = True
+			elif not _ders.alabilen == "['Tüm Lisans ve Lisansüstü Programlar']":
+				alabilen_bolumler = ayirma(_ders.alabilen)
+				if bolum.upper() in alabilen_bolumler:
+					alabilir = True
+			else:
+				alabilir = True
 
-		if alabilir:	
-			if _ders.ad in eklenen_dersler.adlar:
-				continue
-			else:			
-				onay = True
-				_gunler = ayirma(_ders.gunler)
-				_saatler = ayirma(_ders.saatler)
-				print(f"günler {_gunler} saatler {_saatler}")
-				for i in range(len(_saatler)):
-					_gun_index = gun_adlari.index(_gunler[i])
-					onay = (gunler[_gun_index].saate_ders_ekle(_saatler[i], _ders) & onay)
-
-				if not onay:
+			if alabilir:	
+				if _ders.ad in eklenen_dersler.adlar:
+					continue
+				else:			
+					onay = True
+					_gunler = ayirma(_ders.gunler)
+					_saatler = ayirma(_ders.saatler)
+					print(f"günler {_gunler} saatler {_saatler}")
 					for i in range(len(_saatler)):
 						_gun_index = gun_adlari.index(_gunler[i])
-						_ayrik_saatler = _saatler[i].split("/")
-						_saat_skala = list(range(int(_ayrik_saatler[0]) // 100, int(_ayrik_saatler[1]) // 100))
-						for j in range(len(gunler[_gun_index].saatler)):
-							if gunler[_gun_index].saatler[j].saat in _saat_skala:							
-								if gunler[_gun_index].saatler[j].ders == _ders.ad:
-									gunler[_gun_index].saatten_dersi_kaldir(_saatler[i], _ders)
-				else:
-					eklenen_dersler.dersler.append(_ders)
-					eklenen_dersler.adlar.append(_ders.ad)
-					eklenen_dersler.crnler.append(_ders.crn)
-					eklenen_dersler.hocalar.append(_ders.hoca)
-					
-					print(f"eklenen dersler {eklenen_dersler.adlar}")
+						onay = (gunler[_gun_index].saate_ders_ekle(_saatler[i], _ders) & onay)
 
-	if len(istenen_ders_adlari) != len(eklenen_dersler.dersler):
-		print(f'istenen_ders_adlari: {istenen_ders_adlari}, eklenen_dersler.dersler: {eklenen_dersler.dersler}')
-		dersler = karistir(dersler)
-		program_olustur(bolum, dersler, app = app)
+					if not onay:
+						for i in range(len(_saatler)):
+							_gun_index = gun_adlari.index(_gunler[i])
+							_ayrik_saatler = _saatler[i].split("/")
+							_saat_skala = list(range(int(_ayrik_saatler[0]) // 100, int(_ayrik_saatler[1]) // 100))
+							for j in range(len(gunler[_gun_index].saatler)):
+								if gunler[_gun_index].saatler[j].saat in _saat_skala:							
+									if gunler[_gun_index].saatler[j].ders == _ders.ad:
+										gunler[_gun_index].saatten_dersi_kaldir(_saatler[i], _ders)
+					else:
+						eklenen_dersler.dersler.append(_ders)
+						eklenen_dersler.adlar.append(_ders.ad)
+						eklenen_dersler.crnler.append(_ders.crn)
+						eklenen_dersler.hocalar.append(_ders.hoca)
+						
+						print(f"eklenen dersler {eklenen_dersler.adlar}")
 
-	else:
-		for _ders in eklenen_dersler.dersler:
-			_ders.yazdir()
-
-		programi_yazdir(gunler)
-
-		if not hash_kontrol(hashler, hash_olustur(eklenen_dersler.dersler)):
-			hashler.append(hash_olustur(eklenen_dersler.dersler))			
-			app.tabloyuDoldur(gunler)
-		else:
+		if (len(istenen_ders_adlari) > len(eklenen_dersler.dersler)):
+			print(f'istenen_ders_adlari: {istenen_ders_adlari}, eklenen_dersler.dersler: {eklenen_dersler.dersler}')
 			dersler = karistir(dersler)
 			program_olustur(bolum, dersler, app = app)
 
-	return eklenen_dersler.dersler
+		else:
+			for _ders in eklenen_dersler.dersler:
+				_ders.yazdir()
+
+			#programi_yazdir(gunler)
+
+			if not hash_kontrol(hashler, hash_olustur(eklenen_dersler.dersler)):
+				hashler.append(hash_olustur(eklenen_dersler.dersler))			
+				app.tabloyuDoldur(gunler)				
+			else:
+				dersler = karistir(dersler)
+				program_olustur(bolum, dersler, app = app)
+
+		return eklenen_dersler.dersler
+		
+	except RecursionError:
+		dp_gui.popup_olustur('Girilen dersler ile program oluşturulamıyor!', 'Tamam')
+		return None
 
 def programi_yazdir(gunler):
 	ders_programi = [["" for i in range(len(gunler[0].saatler))] for j in range(len(gunler))]
