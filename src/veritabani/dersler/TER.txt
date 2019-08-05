@@ -1,2 +1,6 @@
-30370;TER 201;Birgül  Benli;40;['Perþembe ', 'Perþembe '];['0830/1129 ', '1330/1629 '];['B204 ', 'B204 '];['CEV', ' CHZ', ' DEN', ' GEM', ' ISL', ' JEO', ' KMM', ' KOM', ' KON', ' PET']
-30783;TER 201E;Gamze  Gümüþlü Gür, Mert  Gür;20;['Perþembe ', 'Perþembe '];['0830/1129 ', '1330/1629 '];['D106 ', 'D106 '];['CEV', ' CEVE', ' CHZE', ' DENE', ' GEME', ' GEMK', ' ISLE', ' JEF', ' JEOE', ' KOME', ' MAD', ' PETE', ' TEK', ' TEKE']
+12167;TER 201;***;50;['Pazartesi '];['0830/1129 '];['B206 '];CHZ;['MDB']
+13163;TER 201;***;40;['Cuma '];['0830/1129 '];['--- '];KOM;['EEB']
+11008;TER 201;***;50;['Cuma '];['0930/1229 '];['D202 '];['CEV', ' CHZ', ' DEN', ' GEM', ' ISL', ' JEO', ' KMMM', ' KOM', ' PET', ' TEK'];['KMB']
+13270;TER 201E;***;80;['Çarþamba '];['0930/1229 '];['D331 '];['CEV', ' CEVE', ' CHZE', ' DENE', ' GEME', ' GEMK', ' ISLE', ' JEF', ' JEOE', ' KOME', ' MAD', ' PETE', ' TEK', ' TEKE'];['MKB']
+12227;TER 201E;***;0;['Perþembe '];['1330/1629 '];['B204 '];PETE;['MDB']
+11002;TER 203;***;40;['Pazartesi '];['1330/1629 '];['D204 '];['KMM', ' KMMM'];['KMB']

@@ -1,1 +1,5 @@
-30644;ISH 202E;Moiz  Elnekave;30;['Çarþamba ', 'Çarþamba '];['0930/1229 ', '1330/1629 '];['D301 ', 'D301 '];['ISL', ' ISLE']
+11017;ISH 202;Melek  Tüter, Nalan  Erdöl Aydýn;60;['Cuma '];['0930/1229 '];['D304 '];ISL;['KMB']
+11019;ISH 202E;Moiz  Elnekave;40;['Cuma '];['1330/1629 '];['D304 '];['ISL', ' ISLE'];['KMB']
+13193;ISH 301;Ayþe Gül Tanýk, Nevin  Yaðcý, Serdar  Doðruel;60;['Çarþamba '];['1230/1529 '];['A105 '];ISL;['INB']
+13196;ISH 301E;Ayþe Gül Tanýk, Nevin  Yaðcý, Serdar  Doðruel;60;['Çarþamba '];['0930/1229 '];['B101 '];['ISL', ' ISLE'];['INB']
+11045;ISH 303E;Hatice Funda Karbancýoðlu Güler;50;['Cuma '];['0930/1229 '];['D204 '];['ISL', ' ISLE'];['KMB']

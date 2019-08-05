@@ -1,2 +1,6 @@
-30665;MUH 302E;Ali  Ercengiz;30;['Perþembe ', 'Cuma '];['0830/1229 ', '1330/1729 '];['D105 ', 'B308 '];['MAT', ' MATE']
-30408;MUH 321;Ahmet  Kýrýþ;25;['Çarþamba ', 'Perþembe '];['1330/1729 ', '1330/1729 '];['A305 ', 'D205 '];['MAT', ' MATM']
+10417;MUH 201E;Rahmiye  Ergün;50;['Pazartesi '];['0830/1129 '];['D202 '];['MAT', ' MATE'];['FEB']
+10418;MUH 211;Ali  Ercengiz;50;['Salý '];['0830/1129 '];['D206 '];['MAT', ' MATM'];['FEB']
+10420;MUH 302;Ahmet  Kýrýþ;80;['Çarþamba ', 'Perþembe '];['0830/1029 ', '0830/1029 '];['Y3 ', 'D202 '];['FIZ', ' MAT'];['FEB', 'FEB']
+10421;MUH 321;Burcu  Tunga;80;['Çarþamba ', 'Perþembe '];['0830/1029 ', '0830/1029 '];['Y2 ', 'D203 '];['MAT', ' MATM'];['FEB', 'FEB']
+10422;MUH 335;Ýzzet  Göksel;80;['Salý '];['0830/1129 '];['D203 '];MAT;['FEB']
+10797;MUH 453;Elimhan  Mahmudov;24;['Perþembe '];['1430/1729 '];['Y5 '];['FIZ', ' MAT', ' MATM'];['FEB']

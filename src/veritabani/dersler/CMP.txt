@@ -1,0 +1,3 @@
+12638;CMP 103;Erke  Arýbaþ;40;['Pazartesi '];['1230/1429 '];['GZ104 '];['MBI', ' MCB', ' SCE', ' SIN'];['KMB']
+13386;CMP 111;Oðuz Salim Söðüt;10;['Pazartesi '];['1330/1729 '];['--- '];SGM;['DZB']
+13351;CMP 113;Muhsin  Kadýoðlu;10;['Perþembe '];['0830/1229 '];['--- '];SDU;['DZB']

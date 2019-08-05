@@ -1,0 +1,2 @@
+13611;NTH 103;Pelin  Helvacý;45;['Salý '];['0830/1029 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13557;NTH 103;Sait  Kofoðlu;45;['Perþembe '];['0830/1029 '];['A304 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['INB']

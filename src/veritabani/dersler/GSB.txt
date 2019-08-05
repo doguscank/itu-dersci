@@ -1,0 +1,2 @@
+10553;GSB 343;Ferhan  Gözgü Çelik;12;['Salý '];['1330/1629 '];['RESATOLYE1 '];['ICM', ' MIM', ' PEM', ' SBP'];['MMB']
+10554;GSB 363;Aynur  Karakaþ Karaaðaç;12;['Perþembe '];['0830/1129 '];['SER-ATELYE '];['ICM', ' MIM', ' PEM', ' SBP'];['MMB']

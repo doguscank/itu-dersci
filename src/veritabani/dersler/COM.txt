@@ -1,0 +1,2 @@
+13522;COM 101;Ali Sinan Çabuk;40;['Salý '];['1330/1729 '];['6307 '];['GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['EEB']
+13602;COM 101;Ata  Bilgili;45;['Çarþamba '];['0830/1229 '];['--- '];['GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']

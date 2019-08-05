@@ -48,7 +48,7 @@ def dersleri_cek():
 				break
 			else:
 				ders_bilgisi = bilgi_satir.split(";")
-				yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[4], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[3], ders_bilgisi[7])
+				yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[4], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[3], ders_bilgisi[7], ders_bilgisi[8])
 				dersler.dersler.append(yeni_ders)
 				dersler.crnler.append(ders_bilgisi[0])
 				dersler.adlar.append(ders_bilgisi[1])
@@ -69,7 +69,7 @@ def ders_cek(ders_kodu):
 			break
 		else:
 			ders_bilgisi = bilgi_satir.split(";")
-			yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[4], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[3], ders_bilgisi[7])
+			yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[4], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[3], ders_bilgisi[7], ders_bilgisi[8])
 			dersler.dersler.append(yeni_ders)
 			dersler.crnler.append(ders_bilgisi[0])
 			dersler.adlar.append(ders_bilgisi[1])
@@ -114,36 +114,11 @@ def karistir(liste):
 	return liste
 
 def ayirma(ayrilacak): 
-	table = ayrilacak.maketrans(" ", " ", "[]' ")
+	table = ayrilacak.maketrans(" ", " ", "[]\n' ")
 	_ayrilacak = ayrilacak.translate(table)
 	if "," in ayrilacak:
 		_ayrilacak = _ayrilacak.split(",")
 	return _ayrilacak
-
-def crn_kontrol(crn_liste, dersler):
-	ayiklanmis_dersler = []
-
-	for _ders in dersler:
-		if _ders.crn in crn_liste:
-			ayiklanmis_dersler.append(_ders)
-
-def hoca_kontrol(hoca_liste, dersler):
-	ayiklanmis_dersler = []
-	ders_adi_karaliste = []
-
-	for _ders in dersler:
-		if _ders.hoca in hoca_liste:
-			if not _ders.ad in ders_adi_karaliste:
-				ders_adi_karaliste.append(_ders.ad)
-
-	for _ders in dersler:
-		if (_ders.ad not in ders_adi_karaliste) or (_ders.hoca in hoca_liste):
-			ayiklanmis_dersler.append(_ders)
-
-	#print("Hoca kontrol yapıldı. Ayıklanmış dersler: ")
-	#ayiklanmis_dersler.liste_yazdir()
-
-	return ayiklanmis_dersler
 
 def tek_ders_hoca_eleme(hoca_adi, dersler):
 	
@@ -197,7 +172,7 @@ def program_olustur(bolum, dersler, app = None):
 
 			if bolum == "":
 				alabilir = True
-			elif not _ders.alabilen == "['Tüm Lisans ve Lisansüstü Programlar']":
+			elif not "Tüm Lisans ve Lisansüstü Programlar" in _ders.alabilen:
 				alabilen_bolumler = ayirma(_ders.alabilen)
 				if bolum.upper() in alabilen_bolumler:
 					alabilir = True
@@ -212,19 +187,33 @@ def program_olustur(bolum, dersler, app = None):
 					_gunler = ayirma(_ders.gunler)
 					_saatler = ayirma(_ders.saatler)
 					print(f"günler {_gunler} saatler {_saatler}")
-					for i in range(len(_saatler)):
-						_gun_index = gun_adlari.index(_gunler[i])
-						onay = (gunler[_gun_index].saate_ders_ekle(_saatler[i], _ders) & onay)
+					if isinstance(_gunler, str):						
+						_gun_index = gun_adlari.index(_gunler)
+						onay = (gunler[_gun_index].saate_ders_ekle(_saatler, _ders) & onay)
+					else:
+						for i in range(len(_saatler)):	
+							_gun_index = gun_adlari.index(_gunler[i])
+							onay = (gunler[_gun_index].saate_ders_ekle(_saatler[i], _ders) & onay)					
 
 					if not onay:
 						for i in range(len(_saatler)):
-							_gun_index = gun_adlari.index(_gunler[i])
-							_ayrik_saatler = _saatler[i].split("/")
+							if isinstance(_gunler, str):
+								_gun_index = gun_adlari.index(_gunler)
+							else:		
+								_gun_index = gun_adlari.index(_gunler[i])
+							if len(_saatler) == 9:
+								_ayrik_saatler = _saatler.split("/")
+							else:								
+								_ayrik_saatler = _saatler[i].split("/")
+							print(_ayrik_saatler)
 							_saat_skala = list(range(int(_ayrik_saatler[0]) // 100, int(_ayrik_saatler[1]) // 100))
 							for j in range(len(gunler[_gun_index].saatler)):
 								if gunler[_gun_index].saatler[j].saat in _saat_skala:							
 									if gunler[_gun_index].saatler[j].ders == _ders.ad:
-										gunler[_gun_index].saatten_dersi_kaldir(_saatler[i], _ders)
+										if len(_saatler) == 9:
+											gunler[_gun_index].saatten_dersi_kaldir(_saatler, _ders)
+										else:
+											gunler[_gun_index].saatten_dersi_kaldir(_saatler[i], _ders)
 					else:
 						eklenen_dersler.dersler.append(_ders)
 						eklenen_dersler.adlar.append(_ders.ad)

@@ -1,8 +1,9 @@
 class Ders:
-	def __init__(self, crn, ad, hoca, gunler, saatler, siniflar, kontenjan, alabilen):
+	def __init__(self, crn, ad, hoca, gunler, saatler, siniflar, kontenjan, alabilen, binalar):
 		self.crn = crn
 		self.ad = ad
 		self.hoca = hoca
+		self.binalar = binalar
 		self.gunler = gunler
 		self.saatler = saatler
 		self.siniflar = siniflar
@@ -10,7 +11,7 @@ class Ders:
 		self.alabilen = alabilen
 
 	def yazdir(self):
-		print(f'CRN = {self.crn}\nAd = {self.ad}\nHoca = {self.hoca}\nGünler = {self.gunler}\nSaatler = {self.saatler}\nSınıflar = {self.siniflar}\nKontejan = {self.kontenjan}\nAlabilen bölümler = {self.alabilen}')
+		print(f'CRN = {self.crn}\nAd = {self.ad}\nHoca = {self.hoca}\nBinalar = {self.binalar}\nGünler = {self.gunler}\nSaatler = {self.saatler}\nSınıflar = {self.siniflar}\nKontejan = {self.kontenjan}\nAlabilen bölümler = {self.alabilen}')
 
 class DersListe:
 	def __init__(self, dersler, crnler, adlar, hocalar):

@@ -54,7 +54,7 @@ def db_guncelle(app = None):
 			for td in soup.find_all('tr')[j].find_all('td'):
 				td_list.append(td)
 			
-			ders = ders_class.Ders("crn", "ad", "hoca", [], [], [], "kontenjan", [])
+			ders = ders_class.Ders("crn", "ad", "hoca", [], [], [], "kontenjan", [], [])
 
 			ders.crn = td_list[0].string
 			ders.ad = td_list[1].string
@@ -63,18 +63,27 @@ def db_guncelle(app = None):
 
 			gun_sayisi = len(td_list[5].find_all('br'))
 
+			for i in range(len(td_list[4].find_all('a')[0].contents)):
+				if i % 2  == 0:
+					ders.binalar.append(td_list[4].find_all('a')[0].contents[i])
+
 			for i in range(gun_sayisi):
 				ders.gunler.append(td_list[5].contents[2 * i])
 				ders.saatler.append(td_list[6].contents[2 * i])
 				ders.siniflar.append(td_list[7].contents[2 * i])
 
-			ders.alabilen = td_list[11].string.split(',')
-
+			if not td_list[11].string is None:
+				if ',' in td_list[11].string:
+					ders.alabilen = td_list[11].string.split(',')
+				else:
+					ders.alabilen = td_list[11].string
+			else:
+				ders.alabilen = ""
 			#print(f"crn: {ders.crn}\nad: {ders.ad}\nhoca: {ders.hoca}\nkontejan: {ders.kontenjan}\ngünler: {ders.gunler}\nsaatler: {ders.saatler}\nsınıflar: {ders.siniflar}\nalabilenler: {ders.alabilen}")
 			dersler.append(ders)
 
 			f = open(f"veritabani/dersler/{ders_kodu}.txt", "a")
-			f.write(f"{ders.crn};{ders.ad};{ders.hoca};{ders.kontenjan};{ders.gunler};{ders.saatler};{ders.siniflar};{ders.alabilen}\n")
+			f.write(f"{ders.crn};{ders.ad};{ders.hoca};{ders.kontenjan};{ders.gunler};{ders.saatler};{ders.siniflar};{ders.alabilen};{ders.binalar}\n")
 			f.close()
 
 	dp_gui.popup_olustur('Veritabanı başarıyla güncellendi!', 'Tamam')

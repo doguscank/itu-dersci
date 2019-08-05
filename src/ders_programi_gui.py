@@ -6,7 +6,7 @@ import ders_class as ders
 import gun_class as gun
 import fonksiyonlar as func
 import veritabani_guncelleme as db
-from PyQt5.QtWidgets import QApplication, QLabel, QTableWidget, QTableWidgetItem, QGridLayout, QAction, QMainWindow, QWidget, QPushButton, QComboBox, QLineEdit, QMenuBar, QCheckBox
+from PyQt5.QtWidgets import QApplication, QLabel, QTableWidget, QTableWidgetItem, QVBoxLayout, QGridLayout, QAction, QMainWindow, QWidget, QPushButton, QComboBox, QLineEdit, QMenuBar, QCheckBox, QDialog
 from PyQt5.QtCore import pyqtSlot, Qt
 
 class App(QWidget):
@@ -137,7 +137,7 @@ class App(QWidget):
 		self.labelTemizle()
 
 		for ders in dersler:
-			yeni_label = QLabel(f'{ders.crn}, {ders.ad}, {ders.hoca}, {ders.gunler}, {ders.saatler}')
+			yeni_label = QLabel(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}')
 			self.ders_labellar.append(yeni_label)
 			self.layout.addWidget(yeni_label, (99 - len(self.ders_labellar)), 0, 1, 10)
 			self.setLayout(self.layout)
@@ -186,10 +186,10 @@ class App(QWidget):
 
 			dersler_gonderilecek.extend(func.tek_ders_hoca_eleme(gonderilecek_hoca, dersler_hoca_elenecek))
 
-		dersler_gonderilecek = self.gunleriAyikla(dersler_gonderilecek)
-
 		programdaki_dersler = func.program_olustur(bolum, func.karistir(dersler_gonderilecek), app = self)
-		self.dersLabelleriniKoy(programdaki_dersler)
+
+		if not programdaki_dersler == None:
+			self.dersLabelleriniKoy(programdaki_dersler)
 
 	@pyqtSlot()
 	def cboxEkleme(self):
@@ -209,3 +209,15 @@ class DersProgramGUI:
 
 	def update_GUI(gunler):
 		self.executable.tabloyuDoldur(gunler)
+
+def popup_olustur(popup_text, buton_text):
+	popup = QDialog()
+	layout = QVBoxLayout()
+	label = QLabel(popup_text, popup)
+	buton = QPushButton(buton_text, popup)
+	buton.clicked.connect(popup.close)
+	layout.addWidget(label, stretch = 12, alignment = Qt.AlignVCenter)
+	layout.addWidget(buton, stretch = 12, alignment = Qt.AlignVCenter)
+	popup.setLayout(layout)
+	popup.setModal(True)
+	popup.exec_()
