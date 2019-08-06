@@ -1,2 +1,2 @@
-13566;HSS 301;Emin  Korkut;45;['Çarþamba '];['1230/1529 '];['D308 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
-13634;HSS 301;Sabire  Cömert;45;['Cuma '];['1330/1629 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13566;HSS 301;Emin  Korkut;45;['Carsamba '];['1230/1529 '];['D308 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
+13634;HSS 301;Sabire  Comert;45;['Cuma '];['1330/1629 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']

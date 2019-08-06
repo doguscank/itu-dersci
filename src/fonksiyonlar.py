@@ -145,9 +145,9 @@ def gun_bos_birakma(gun, dersler):
 def program_olustur(bolum, dersler, app = None):
 	try:
 		pzt = gun.Gun("Pazartesi")
-		sali = gun.Gun("Salı")
-		crs = gun.Gun("Çarşamba")
-		prs = gun.Gun("Perşembe")
+		sali = gun.Gun("Sali")
+		crs = gun.Gun("Carsamba")
+		prs = gun.Gun("Persembe")
 		cuma = gun.Gun("Cuma")
 		
 		gunler = [pzt, sali, crs, prs, cuma]

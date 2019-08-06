@@ -1,4 +1,4 @@
-10796;JPN 101;Salih  Kirazoðlu;20;['Salý '];['1330/1729 '];['--- '];Tüm Lisans ve Lisansüstü Programlar;['DIB']
-10795;JPN 102;Salih  Kirazoðlu;25;['Çarþamba '];['0830/1229 '];['1303 '];Tüm Lisans ve Lisansüstü Programlar;['EEB']
-10798;JPN 201;Salih  Kirazoðlu;25;['Perþembe '];['1330/1729 '];['A103 '];Tüm Lisans ve Lisansüstü Programlar;['INB']
-10800;JPN 202;Salih  Kirazoðlu;25;['Cuma '];['1330/1729 '];['B32 '];Tüm Lisans ve Lisansüstü Programlar;['MED']
+10796;JPN 101;Salih  Kirazoglu;20;['Sali '];['1330/1729 '];['--- '];Tüm Lisans ve Lisansüstü Programlar;['DIB']
+10795;JPN 102;Salih  Kirazoglu;25;['Carsamba '];['0830/1229 '];['1303 '];Tüm Lisans ve Lisansüstü Programlar;['EEB']
+10798;JPN 201;Salih  Kirazoglu;25;['Persembe '];['1330/1729 '];['A103 '];Tüm Lisans ve Lisansüstü Programlar;['INB']
+10800;JPN 202;Salih  Kirazoglu;25;['Cuma '];['1330/1729 '];['B32 '];Tüm Lisans ve Lisansüstü Programlar;['MED']

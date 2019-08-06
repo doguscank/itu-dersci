@@ -4,6 +4,11 @@ import ders_class
 import ders_programi_gui as dp_gui
 import os.path
 
+def duzeltme(duzeltilecek): 
+	table = duzeltilecek.maketrans("İıÜüĞğÇçŞşÖö", "IiUuGgCcSsOo")
+	duzgun = duzeltilecek.translate(table)
+	return duzgun
+
 def db_guncelle(app = None):
 
 	path = os.path.dirname(os.path.abspath(__file__))
@@ -57,9 +62,9 @@ def db_guncelle(app = None):
 			ders = ders_class.Ders("crn", "ad", "hoca", [], [], [], "kontenjan", [], [])
 
 			ders.crn = td_list[0].string
-			ders.ad = td_list[1].string
-			ders.hoca = td_list[3].string
-			ders.kontenjan = td_list[8].string
+			ders.ad = duzeltme(td_list[1].string)
+			ders.hoca = duzeltme(td_list[3].string)
+			ders.kontenjan = duzeltme(td_list[8].string)
 
 			gun_sayisi = len(td_list[5].find_all('br'))
 
@@ -68,9 +73,9 @@ def db_guncelle(app = None):
 					ders.binalar.append(td_list[4].find_all('a')[0].contents[i])
 
 			for i in range(gun_sayisi):
-				ders.gunler.append(td_list[5].contents[2 * i])
-				ders.saatler.append(td_list[6].contents[2 * i])
-				ders.siniflar.append(td_list[7].contents[2 * i])
+				ders.gunler.append(duzeltme(td_list[5].contents[2 * i]))
+				ders.saatler.append(duzeltme(td_list[6].contents[2 * i]))
+				ders.siniflar.append(duzeltme(td_list[7].contents[2 * i]))
 
 			if not td_list[11].string is None:
 				if ',' in td_list[11].string:

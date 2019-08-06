@@ -1,7 +1,3 @@
-"""
-TODO:
-
-"""
 import ders_class as ders
 import gun_class as gun
 import fonksiyonlar as func
@@ -18,7 +14,7 @@ class App(QWidget):
 		self.width = 660
 		self.height = 840
 		self.cboxSayisi = 0
-		self.cboxBaseSayi = 4
+		self.cboxBaseSayi = 5
 		self.ders_labellar = []
 		self.initUI(gunler)
 
@@ -41,9 +37,9 @@ class App(QWidget):
 
 		self.gun_label = QLabel('Boş bırakmak istediğiniz günleri seçiniz: ', self)
 		self.pzt_check = QCheckBox('Pazartesi', self)
-		self.sali_check = QCheckBox('Salı', self)
-		self.crs_check = QCheckBox('Çarşamba', self)
-		self.prs_check = QCheckBox('Perşembe', self)
+		self.sali_check = QCheckBox('Sali', self)
+		self.crs_check = QCheckBox('Carsamba', self)
+		self.prs_check = QCheckBox('Persembe', self)
 		self.cuma_check = QCheckBox('Cuma', self)
 
 		self.dersEklemeButonu = QPushButton('Ders Ekle', self)

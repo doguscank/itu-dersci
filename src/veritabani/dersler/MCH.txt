@@ -1,4 +1,4 @@
-13551;MCH 100;Abdullah  Aydoðan;45;['Pazartesi '];['1030/1329 '];['D308 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
-13605;MCH 100;Yasin  Arslanoðlu;45;['Salý '];['1330/1629 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
-13552;MCH 100L;Abdullah  Aydoðan;45;['Pazartesi '];['0830/1029 '];['D309 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
-13606;MCH 100L;Yasin  Arslanoðlu;45;['Salý '];['1630/1829 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13551;MCH 100;Abdullah  Aydogan;45;['Pazartesi '];['1030/1329 '];['D308 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
+13605;MCH 100;Yasin  Arslanoglu;45;['Sali '];['1330/1629 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13552;MCH 100L;Abdullah  Aydogan;45;['Pazartesi '];['0830/1029 '];['D309 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
+13606;MCH 100L;Yasin  Arslanoglu;45;['Sali '];['1630/1829 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
