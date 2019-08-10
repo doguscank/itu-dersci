@@ -9,7 +9,7 @@
 11594;MUT 131;Murat  Tiras;40;['Sali '];['1330/1529 '];['--- '];['KMP', ' MTR', ' MUT', ' MUZ'];['TMB']
 11599;MUT 141;Sertac  Kaki;20;['Pazartesi ', 'Persembe '];['1530/1729 ', '1030/1229 '];['--- ', '--- '];['MTMS', ' MUT'];['TMB', 'TMB']
 11605;MUT 153;Taylan  Ozdemir;20;['Cuma '];['1030/1229 '];['--- '];MUT;['TMB']
-11610;MUT 161;Mustafa Aydin Oksuz;20;['Cuma '];['1030/1229 '];['--- '];MUT;['TMB']
+11610;MUT 161;Mustafa Aydin Oksuz;20;['Pazartesi '];['0830/1029 '];['--- '];MUT;['TMB']
 11431;MUT 201;Ahmet Tunc Buyruklar;5;['---- '];['/ '];['--- '];['MTMY', ' MUT'];['TMB']
 11432;MUT 201;Mehmet  Tangor;5;['---- '];['/ '];['--- '];['MTMY', ' MUT'];['TMB']
 11433;MUT 211;Ibrahim  Coskun;5;['---- '];['/ '];['--- '];['MTMM', ' MUT'];['TMB']

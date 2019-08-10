@@ -4,7 +4,7 @@
 11041;MET 215;Suheyla  Aydin;90;['Carsamba '];['0930/1229 '];['D103 '];MET;['KMB']
 11047;MET 215E;Nuri  Solak;90;['Persembe '];['1030/1329 '];['D103 '];METE;['KMB']
 11048;MET 313;Mahmut Ercan Acma, Servet Ibrahim Timur;70;['Pazartesi '];['0830/1029 '];['D103 '];MET;['KMB']
-11049;MET 313E;Onuralp  Yucel, Cevat Bora Derin, Mehmet Seref Sonmez;75;['Pazartesi '];['0930/1129 '];['D204 '];METE;['KMB']
+11049;MET 313E;Onuralp  Yucel, Cevat Bora Derin, Mehmet Seref Sonmez;75;['Pazartesi '];['0830/1029 '];['D204 '];METE;['KMB']
 11051;MET 315E;Mustafa Lutfi Ovecoglu, Burak  Ozkal;140;['Pazartesi '];['1330/1629 '];['D201 '];['MET', ' METE'];['KMB']
 11052;MET 317E;Guldem  Kartal Sireli;140;['Sali '];['1030/1329 '];['D201 '];['MET', ' METE'];['KMB']
 11053;MET 335;Huseyin  Kizil;65;['Persembe '];['0830/1129 '];['D105 '];MET;['KMB']

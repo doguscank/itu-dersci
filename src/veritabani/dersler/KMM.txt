@@ -3,7 +3,7 @@
 10973;KMM 211;Fatos Yuksel Guvenilir;45;['Sali '];['1330/1629 '];['D301 '];['KMM', ' KMMM'];['KMB']
 10975;KMM 211;Fatma Elif Genceli Guner;45;['Sali '];['1330/1629 '];['D302 '];['KMM', ' KMMM'];['KMB']
 10976;KMM 211E;Melek Mumine Erol Taygun;20;['Sali '];['1330/1629 '];['D305 '];['KMME', ' PETE'];['KMB']
-11010;KMM 224;Sadriye  Oskay, Aysegul  Mericboyu, Reha  Yavuz;45;['Carsamba ', 'Persembe '];['1230/1529 ', '0930/1229 '];['D302 ', 'D303 '];['KMM', ' KMMM'];['KMB', 'KMB']
+11010;KMM 224;Sadriye  Oskay, Aysegul  Mericboyu, Reha  Yavuz;45;['Carsamba ', 'Persembe '];['1230/1529 ', '0930/1129 '];['D302 ', 'D303 '];['KMM', ' KMMM'];['KMB', 'KMB']
 11012;KMM 305E;Serife Birgul Ersolmaz, Husnu  Atakul;30;['Pazartesi ', 'Sali '];['1330/1529 ', '1030/1229 '];['D304 ', 'D304 '];['KMM', ' KMMM'];['KMB', 'KMB']
 10977;KMM 311E;Gamze  Gumuslu Gur;40;['Persembe '];['0930/1229 '];['D302 '];['KMM', ' KMME', ' KMMM'];['KMB']
 11011;KMM 315E;Fethiye Aylin Sungur;45;['Sali ', 'Persembe '];['1330/1529 ', '1530/1629 '];['D203 ', 'D303 '];['KMM', ' KMMM'];['KMB', 'KMB']

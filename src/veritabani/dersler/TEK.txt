@@ -22,3 +22,4 @@
 13507;TEK 455E;Ipek  Yalcin Enis;35;['Carsamba '];['0830/1129 '];['--- '];['TEK', ' TEKE'];['MKB']
 13508;TEK 455E;Ilkay Ozsev Yuksek;35;['Persembe '];['1330/1629 '];['--- '];['TEK', ' TEKE'];['MKB']
 13512;TEK 457E;Berdan  Kalav;30;['Persembe '];['0930/1229 '];['--- '];['TEK', ' TEKE'];['MKB']
+13861;TEK 492E;Omer Berk Berkalp;500;['---- '];['/ '];['--- '];['TEK', ' TEKE'];['---']

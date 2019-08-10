@@ -16,6 +16,7 @@
 12547;ISL 344E;Mehmet  Ercek;80;['Pazartesi '];['1330/1629 '];['--- '];['ISL', ' ISLE'];['---']
 12548;ISL 344E;Mehmet  Ercek;80;['Sali '];['1330/1629 '];['--- '];['ISL', ' ISLE'];['---']
 12550;ISL 353E;Elif  Karaosmanoglu;150;['Carsamba '];['1230/1529 '];['--- '];['EUT', ' EUTE', ' ISL', ' ISLE'];['---']
+13954;ISL 355E;Raziye  Selim;60;['Cuma '];['1330/1629 '];['--- '];['END', ' ENDE', ' ISL', ' ISLE'];['---']
 12551;ISL 363;Fatma  Kusku Akdogan;80;['Sali '];['0930/1229 '];['--- '];ISL;['---']
 12552;ISL 363E;Idil Vedia Evcimen;80;['Pazartesi '];['0930/1229 '];['--- '];ISLE;['---']
 12528;ISL 364;Cicek  Ersoy Kekevi;100;['Cuma '];['0930/1229 '];['A12 '];['ISL', ' ISLE'];['MED']

@@ -5,7 +5,7 @@
 11905;MUK 201E;***;40;['Pazartesi ', 'Sali ', 'Persembe '];['1030/1229 ', '0830/1029 ', '1430/1529 '];['B305 ', 'B307 ', 'B204 '];['FIZ', ' FIZE', ' INS', ' INSE', ' MAT', ' UCKM'];['INB', 'INB', 'INB']
 11906;MUK 201E;***;40;['Carsamba ', 'Persembe ', 'Cuma '];['1030/1229 ', '1030/1229 ', '1130/1229 '];['A101 ', 'A302 ', 'B306 '];['FIZ', ' FIZE', ' INS', ' INSE', ' MAT', ' UCKM'];['INB', 'INB', 'INB']
 11907;MUK 202;***;40;['Pazartesi ', 'Carsamba ', 'Persembe '];['1430/1529 ', '1030/1229 ', '1030/1229 '];['A103 ', 'B201 ', 'A301 '];['FIZ', ' INS'];['INB', 'INB', 'INB']
-11908;MUK 202E;***;40;['Pazartesi ', 'Carsamba ', 'Persembe '];['1030/1229 ', '0830/1029 ', '1430/1529 '];['B308 ', 'A103 ', 'A101 '];['FIZ', ' FIZE', ' INS', ' INSE'];['INB', 'INB', 'INB']
+11908;MUK 202E;***;40;['Pazartesi ', 'Carsamba ', 'Persembe '];['1030/1229 ', '0830/1029 ', '1630/1729 '];['B308 ', 'A103 ', 'A202 '];['FIZ', ' FIZE', ' INS', ' INSE'];['INB', 'INB', 'INB']
 12523;MUK 203;***;45;['Sali '];['0930/1229 '];['409 '];DEN;['GDB']
 12409;MUK 203;***;50;['Persembe '];['0830/1129 '];['D213 '];['UCK', ' UCKM', ' UZB', ' UZBM'];['UUB']
 12411;MUK 203E;***;50;['Persembe '];['0830/1129 '];['D-Z08 '];['UCK', ' UCKE', ' UZB', ' UZBE'];['UUB']

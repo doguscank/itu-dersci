@@ -14,7 +14,7 @@ class App(QWidget):
 		self.width = 660
 		self.height = 840
 		self.cboxSayisi = 0
-		self.cboxBaseSayi = 5
+		self.cboxBaseSayi = 8
 		self.ders_labellar = []
 		self.initUI(gunler)
 
@@ -35,12 +35,22 @@ class App(QWidget):
 		self.dersKoduLbl = QLabel('Bölüm kodunuzu giriniz: ')
 		self.dersKoduInput = QLineEdit(self)
 
-		self.gun_label = QLabel('Boş bırakmak istediğiniz günleri seçiniz: ', self)
+		self.gun_label = QLabel('Boş bırakmak istediğiniz günleri seçiniz:', self)
 		self.pzt_check = QCheckBox('Pazartesi', self)
 		self.sali_check = QCheckBox('Sali', self)
 		self.crs_check = QCheckBox('Carsamba', self)
 		self.prs_check = QCheckBox('Persembe', self)
 		self.cuma_check = QCheckBox('Cuma', self)
+
+		self.kampus_lbl = QLabel('Istediginiz kampusleri seciniz:', self)
+		self.ayazaga_check = QCheckBox('Ayazaga', self)
+		self.macka_check = QCheckBox('Macka', self)
+		self.tuzla_check = QCheckBox('Tuzla', self)
+		self.gumussuyu_check = QCheckBox('Gumussuyu', self)
+		self.taskisla_check = QCheckBox('Taskisla', self)
+
+		self.crn_input_text = QLabel("CRN'leri virgül ile ayırarak giriniz:", self)
+		self.crn_input = QLineEdit(self)
 
 		self.dersEklemeButonu = QPushButton('Ders Ekle', self)
 		self.dersEklemeButonu.setToolTip('Ders eklemek için tıklayın.')
@@ -54,12 +64,20 @@ class App(QWidget):
 		self.layout.addWidget(self.main_menu, 0, 0, 1, 10)
 		self.layout.addWidget(self.dersKoduLbl, 1, 0, 1, 2)
 		self.layout.addWidget(self.dersKoduInput, 1, 2, 1, 2)
-		self.layout.addWidget(self.gun_label, 2, 0, 1, 10)
-		self.layout.addWidget(self.pzt_check, 3, 0, 1, 2)
-		self.layout.addWidget(self.sali_check, 3, 2, 1, 2)
-		self.layout.addWidget(self.crs_check, 3, 4, 1, 2)
-		self.layout.addWidget(self.prs_check, 3, 6, 1, 2)
-		self.layout.addWidget(self.cuma_check, 3, 8, 1, 2)
+		self.layout.addWidget(self.kampus_lbl, 2, 0, 1, 10)
+		self.layout.addWidget(self.ayazaga_check, 3, 0, 1, 2)
+		self.layout.addWidget(self.macka_check, 3, 2, 1, 2)
+		self.layout.addWidget(self.tuzla_check, 3, 4, 1, 2)
+		self.layout.addWidget(self.gumussuyu_check, 3, 6, 1, 2)
+		self.layout.addWidget(self.taskisla_check, 3, 8, 1, 2)
+		self.layout.addWidget(self.gun_label, 4, 0, 1, 10)
+		self.layout.addWidget(self.pzt_check, 5, 0, 1, 2)
+		self.layout.addWidget(self.sali_check, 5, 2, 1, 2)
+		self.layout.addWidget(self.crs_check, 5, 4, 1, 2)
+		self.layout.addWidget(self.prs_check, 5, 6, 1, 2)
+		self.layout.addWidget(self.cuma_check, 5, 8, 1, 2)
+		self.layout.addWidget(self.crn_input_text, 6, 0, 1, 10)
+		self.layout.addWidget(self.crn_input, 7, 0, 1, 10)
 		self.layout.addWidget(self.programOlusturmaButonu, 101, 3, 1, 4)
 		self.layout.addWidget(self.tableWidget, 100, 0, 1, 10)
 		self.layout.addWidget(self.dersEklemeButonu, 99, 3, 1, 4)
@@ -81,21 +99,24 @@ class App(QWidget):
 		self.ders_labellar = []
 
 	def comboboxEkle(self):
-		cbox = QComboBox(self)
+		cboxKod = QComboBox(self)
+		cboxDers = QComboBox(self)
 		cboxHoca = QComboBox(self)
 
 		cboxSilmeButonu = QPushButton('Sil', self)
 		cboxSilmeButonu.setToolTip('Dersi sil.')
-		ders_adlari = func.ders_adlarini_cek()
+		ders_kodlari = func.ders_kodlarini_cek()
 
-		for ders_adi in ders_adlari:
-			cbox.addItem(ders_adi)
+		for ders_kodu in ders_kodlari:
+			cboxKod.addItem(ders_kodu)
 
-		cbox.activated[str].connect(lambda text : self.dersDegisti(text, cboxHoca))
-		cboxSilmeButonu.clicked.connect(lambda _: self.cboxSil([cbox, cboxSilmeButonu, cboxHoca]))
-		self.layout.addWidget(cbox, self.cboxSayisi + self.cboxBaseSayi, 0, 1, 3)
-		self.layout.addWidget(cboxHoca, self.cboxSayisi + self.cboxBaseSayi, 3, 1, 4)
-		self.layout.addWidget(cboxSilmeButonu, self.cboxSayisi + self.cboxBaseSayi, 7, 1, 1)
+		cboxKod.activated[str].connect(lambda text: self.kodDegisti(text, cboxDers))
+		cboxDers.activated[str].connect(lambda text : self.dersDegisti(text, cboxHoca))
+		cboxSilmeButonu.clicked.connect(lambda _: self.cboxSil([cboxKod, cboxDers, cboxSilmeButonu, cboxHoca]))
+		self.layout.addWidget(cboxKod, self.cboxSayisi + self.cboxBaseSayi, 0, 1, 2)
+		self.layout.addWidget(cboxDers, self.cboxSayisi + self.cboxBaseSayi, 2, 1, 2)
+		self.layout.addWidget(cboxHoca, self.cboxSayisi + self.cboxBaseSayi, 4, 1, 4)
+		self.layout.addWidget(cboxSilmeButonu, self.cboxSayisi + self.cboxBaseSayi, 8, 1, 2)
 		self.cboxSayisi += 1
 		self.setLayout(self.layout)
 
@@ -105,9 +126,9 @@ class App(QWidget):
 		self.tableWidget.setColumnCount(6)
 		
 	def tabloyuTemizle(self):
-		for i in range(1, len(gunler) + 1):
-			for j in range(1, len(gunler[0].saatler) + 1):
-				self.tableWidget.setItem(j, i, QTableWidgetItem(""))
+		for i in range(1, 12):
+			for j in range(1, 6):
+				self.tableWidget.setItem(i, j, QTableWidgetItem(""))
 
 	def tabloyuDoldur(self, gunler):
 		for i in range(1, len(gunler[0].saatler) + 1, 1):
@@ -119,6 +140,17 @@ class App(QWidget):
 					self.tableWidget.setItem(j, i + 1, QTableWidgetItem(gunler[i].ad))
 				else:
 					self.tableWidget.setItem(j, i + 1, QTableWidgetItem(gunler[i].saatler[j - 1].ders))
+
+	def kodDegisti(self, text, cbox):
+		cbox.clear()
+
+		dersler = func.ders_cek(text)
+		ders_eklendi = []
+
+		for ders in dersler.dersler:
+			if not ders.ad in ders_eklendi:
+				ders_eklendi.append(ders.ad)
+				cbox.addItem(ders.ad)
 
 	def dersDegisti(self, text, cbox):
 		cbox.clear()
@@ -148,19 +180,37 @@ class App(QWidget):
 
 		return yeni_dersler
 
+	def kampusleriAyikla(self, dersler):
+		kampus_cb = [self.ayazaga_check, self.macka_check, self.tuzla_check, self.gumussuyu_check, self.taskisla_check]
+		istenen_kampus = []
+
+		for i in range(len(kampus_cb)):
+			if kampus_cb[i].isChecked():
+				istenen_kampus.append(i)
+
+		if len(istenen_kampus) > 0:
+			yeni_dersler = func.kampus_secme(dersler, istenen_kampus)
+
+			return yeni_dersler
+
+		else:
+			return dersler
+
 	@pyqtSlot()
 	def programOlustur(self):
 		children = self.findChildren(QComboBox)
 		istenen_dersler, istenen_hocalar = [], []
 		bolum = self.dersKoduInput.text().upper()
-		derslerListe = func.dersleri_cek()
+		istenen_crnler = func.ayirma(self.crn_input.text()) #crn girdisi		
+		istenen_crn_dersler = func.crn_kontrol(istenen_crnler)
+		derslerListe = func.dersleri_cek() #tum dersler
 
 		for child in children:
 			if child.isVisible():
 				child_index = children.index(child)
-				if (child_index % 2 == 0):
+				if ((child_index + 2) % 3 == 0):
 					istenen_dersler.append(str(child.currentText()))
-				else:
+				elif ((child_index + 1) % 3 == 0) and child_index != 0:
 					istenen_hocalar.append(str(child.currentText()))
 
 		dersler_elenecek = []
@@ -174,22 +224,32 @@ class App(QWidget):
 			dersler_hoca_elenecek = []
 
 			for _ders in dersler_elenecek:
-				if _ders.ad == ders_adi: 
-					dersler_hoca_elenecek.append(_ders)
+				if len(istenen_crn_dersler) > 0:
+					for _istenen_ders in istenen_crn_dersler:
+						if not _ders.ad == _istenen_ders.ad:
+							if _ders.ad == ders_adi:
+								dersler_hoca_elenecek.append(_ders)
+				else:
+					if _ders.ad == ders_adi:
+						dersler_hoca_elenecek.append(_ders)
 
 			index = istenen_dersler.index(ders_adi) 
-			gonderilecek_hoca = istenen_hocalar[index] 
+			gonderilecek_hoca = istenen_hocalar[index]
 
 			dersler_gonderilecek.extend(func.tek_ders_hoca_eleme(gonderilecek_hoca, dersler_hoca_elenecek))
 
+		dersler_gonderilecek.extend(istenen_crn_dersler)
 		programdaki_dersler = func.program_olustur(bolum, func.karistir(dersler_gonderilecek), app = self)
 
+		if programdaki_dersler == None or len(programdaki_dersler) == 0:
+			self.tabloyuTemizle()
+			self.labelTemizle()
 		if not programdaki_dersler == None:
 			self.dersLabelleriniKoy(programdaki_dersler)
 
 	@pyqtSlot()
 	def cboxEkleme(self):
-		if self.cboxSayisi <= 9:
+		if self.cboxSayisi <= 10:
 			self.comboboxEkle()
 		else:
 			print("Maksimum ders sayısına ulaşıldı!")

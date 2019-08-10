@@ -1,5 +1,6 @@
 12100;ECN 101E;Christopher Michael Hannum;70;['Persembe '];['1330/1729 '];['--- '];['ECNE', ' ECNM'];['---']
 12101;ECN 104E;Resul  Aydemir;70;['Carsamba '];['1030/1229 '];['--- '];ECNE;['---']
+13860;ECN 201E;Shourjo  Chakravorty;40;['Cuma '];['0830/1229 '];['--- '];['ECNE', ' ECNM'];['---']
 12103;ECN 203E;--;70;['Carsamba '];['0930/1229 '];['--- '];ECNE;['---']
 12109;ECN 205E;Serdar  Altay;70;['Persembe '];['0830/1229 '];['--- '];['ECNE', ' ECNM'];['---']
 12110;ECN 207E;Resul  Aydemir;70;['Persembe '];['1330/1729 '];['--- '];ECNE;['---']

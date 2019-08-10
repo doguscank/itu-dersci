@@ -92,6 +92,33 @@ def ders_hocalarini_cek(ders_adi):
 
 	return hocalar
 
+def binalari_cek():
+	ders_kodlari = ders_kodlarini_cek()
+	bina_adlari = []
+
+	for kod in ders_kodlari:
+		f = open(f"veritabani/dersler/{kod}.txt", "r")
+
+		while(True):
+			bilgi_satir = f.readline()
+			if bilgi_satir == "\n" or bilgi_satir == "" or bilgi_satir == None or bilgi_satir == " " or len(bilgi_satir) == 0:
+				break
+			else:
+				ders_bilgisi = bilgi_satir.split(";")
+				if ',' in ders_bilgisi[8]:
+					bina_bilgileri = ayirma(ders_bilgisi[8])
+					for bilgi in bina_bilgileri:
+						if not bilgi in bina_adlari:
+							bina_adlari.append(bilgi)
+				else:
+					bina_bilgisi = ayirma(ders_bilgisi[8])
+					if not bina_bilgisi in bina_adlari:
+						bina_adlari.append(bina_bilgisi)
+		f.close()
+
+	bina_adlari.sort()
+	return bina_adlari
+
 def hash_olustur(dersler):
 	crnler = []
 	hash_ = ""
@@ -120,8 +147,7 @@ def ayirma(ayrilacak):
 		_ayrilacak = _ayrilacak.split(",")
 	return _ayrilacak
 
-def tek_ders_hoca_eleme(hoca_adi, dersler):
-	
+def tek_ders_hoca_eleme(hoca_adi, dersler):	
 	if hoca_adi == "Herhangi bir hoca":
 		return dersler
 	else:
@@ -141,6 +167,45 @@ def gun_bos_birakma(gun, dersler):
 			ayiklanmis_dersler.append(_ders)
 
 	return ayiklanmis_dersler
+
+def crn_kontrol(crnler):
+	tum_dersler = dersleri_cek()
+	ders_sonuc = []
+
+	if len(crnler) > 0:
+		for _ders in tum_dersler.dersler:
+			if _ders.crn in crnler:
+				ders_sonuc.append(_ders)
+	return ders_sonuc
+
+def kampus_secme(dersler, kampus_index):
+	ayazaga = ['DEP', 'BEB', 'DMB', 'EEB', 'FEB', 'GDB', 'HVZ', 'INB', 'KSB', 'KMB', 'KORT', 'MED', 'MEDB', 'MDB', 'MOB', 'PYB', 'RSLN-M', 'SLN-M', 'SDKM', 'SMB', 'STD', 'SYM', 'UUB', 'UZEM', 'YDB', 'MOBGAM', 'ENB', 'HLB']
+	macka = ['DIB', 'ISB', 'TMB']
+	tuzla = ['DZB']
+	gumussuyu = ['MKB', 'SLN-G']
+	taskisla = ['MMB']
+
+	kampusler = [ayazaga, macka, tuzla, gumussuyu, taskisla]
+	kampus_alinabilir, dersler_gonderilecek = [], []
+
+	for i in range(len(kampusler)):
+		if i in kampus_index:
+			kampus_alinabilir.append(kampusler[i])
+
+	for _ders in dersler:
+		for kampus in kampus_alinabilir:
+			binalar = ayirma(_ders.binalar)
+			if isinstance(binalar, str):
+				if binalar in kampus:
+					dersler_gonderilecek.append(_ders)
+					break
+			else:
+				for bina in binalar:
+					if bina in kampus:
+						dersler_gonderilecek.append(_ders)
+						break
+
+	return dersler_gonderilecek
 
 def program_olustur(bolum, dersler, app = None):
 	try:
@@ -166,6 +231,7 @@ def program_olustur(bolum, dersler, app = None):
 				istenen_ders_adlari.append(_ders.ad)
 
 		_dersler = app.gunleriAyikla(dersler)
+		_dersler = app.kampusleriAyikla(_dersler)
 
 		for _ders in _dersler:
 			alabilir = False
@@ -186,7 +252,7 @@ def program_olustur(bolum, dersler, app = None):
 					onay = True
 					_gunler = ayirma(_ders.gunler)
 					_saatler = ayirma(_ders.saatler)
-					print(f"günler {_gunler} saatler {_saatler}")
+					#print(f"günler {_gunler} saatler {_saatler}")
 					if isinstance(_gunler, str):						
 						_gun_index = gun_adlari.index(_gunler)
 						onay = (gunler[_gun_index].saate_ders_ekle(_saatler, _ders) & onay)
@@ -205,7 +271,7 @@ def program_olustur(bolum, dersler, app = None):
 								_ayrik_saatler = _saatler.split("/")
 							else:								
 								_ayrik_saatler = _saatler[i].split("/")
-							print(_ayrik_saatler)
+							#print(_ayrik_saatler)
 							_saat_skala = list(range(int(_ayrik_saatler[0]) // 100, int(_ayrik_saatler[1]) // 100))
 							for j in range(len(gunler[_gun_index].saatler)):
 								if gunler[_gun_index].saatler[j].saat in _saat_skala:							
@@ -220,10 +286,10 @@ def program_olustur(bolum, dersler, app = None):
 						eklenen_dersler.crnler.append(_ders.crn)
 						eklenen_dersler.hocalar.append(_ders.hoca)
 						
-						print(f"eklenen dersler {eklenen_dersler.adlar}")
+						#print(f"eklenen dersler {eklenen_dersler.adlar}")
 
 		if (len(istenen_ders_adlari) > len(eklenen_dersler.dersler)):
-			print(f'istenen_ders_adlari: {istenen_ders_adlari}, eklenen_dersler.dersler: {eklenen_dersler.dersler}')
+			#print(f'istenen_ders_adlari: {istenen_ders_adlari}, eklenen_dersler.dersler: {eklenen_dersler.dersler}')
 			dersler = karistir(dersler)
 			program_olustur(bolum, dersler, app = app)
 
@@ -242,7 +308,7 @@ def program_olustur(bolum, dersler, app = None):
 
 		return eklenen_dersler.dersler
 		
-	except RecursionError:
+	except RecursionError:		
 		dp_gui.popup_olustur('Girilen dersler ile program oluşturulamıyor!', 'Tamam')
 		return None
 

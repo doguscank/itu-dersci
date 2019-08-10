@@ -1,3 +1,4 @@
+13827;JDF 241;Mehmet Ufuk Ozerman;20;['Cuma '];['0830/0929 '];['B308 '];GEO;['INB']
 12373;JDF 315E;Serdar  Erol, Bihter  Erol;30;['Pazartesi '];['1530/1729 '];['B204 '];['GEO', ' GEOE', ' JDF'];['INB']
 12374;JDF 427;Zaide  Duran;30;['Sali '];['1130/1329 '];['A202 '];['GEO', ' JDF'];['INB']
 12375;JDF 435E;Ahmet Ozgur Dogru;40;['Cuma '];['0830/1129 '];['D203 '];['GEO', ' GEOE', ' JDF'];['INB']
