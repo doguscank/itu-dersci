@@ -306,7 +306,7 @@ def program_olustur(bolum, dersler, app = None):
 				dersler = karistir(dersler)
 				program_olustur(bolum, dersler, app = app)
 
-		return eklenen_dersler.dersler
+		return (eklenen_dersler.dersler, len(istenen_ders_adlari))
 		
 	except RecursionError:		
 		dp_gui.popup_olustur('Girilen dersler ile program oluşturulamıyor!', 'Tamam')

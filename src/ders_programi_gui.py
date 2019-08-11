@@ -162,9 +162,10 @@ class App(QWidget):
 			cbox.addItem(hoca)
 
 	def dersLabelleriniKoy(self, dersler):
-		self.labelTemizle()
+		self.labelTemizle()		
 
 		for ders in dersler:
+			print(ders.ad, flush = True)
 			yeni_label = QLabel(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}')
 			self.ders_labellar.append(yeni_label)
 			self.layout.addWidget(yeni_label, (99 - len(self.ders_labellar)), 0, 1, 10)
@@ -239,12 +240,14 @@ class App(QWidget):
 			dersler_gonderilecek.extend(func.tek_ders_hoca_eleme(gonderilecek_hoca, dersler_hoca_elenecek))
 
 		dersler_gonderilecek.extend(istenen_crn_dersler)
-		programdaki_dersler = func.program_olustur(bolum, func.karistir(dersler_gonderilecek), app = self)
+		programdaki_dersler, ders_sayisi = func.program_olustur(bolum, func.karistir(dersler_gonderilecek), app = self)
 
 		if programdaki_dersler == None or len(programdaki_dersler) == 0:
 			self.tabloyuTemizle()
 			self.labelTemizle()
-		if not programdaki_dersler == None:
+		elif len(programdaki_dersler) == ders_sayisi:
+			if isinstance(programdaki_dersler, list):
+				programdaki_dersler.sort(key = lambda ders: ders.ad, reverse = True)
 			self.dersLabelleriniKoy(programdaki_dersler)
 
 	@pyqtSlot()
