@@ -170,13 +170,14 @@ def gun_bos_birakma(gun, dersler):
 
 def crn_kontrol(crnler):
 	tum_dersler = dersleri_cek()
-	ders_sonuc = []
+	ders_sonuc, ders_sonuc_ad = [], []
 
 	if len(crnler) > 0:
 		for _ders in tum_dersler.dersler:
 			if _ders.crn in crnler:
 				ders_sonuc.append(_ders)
-	return ders_sonuc
+				ders_sonuc_ad.append(_ders.ad)
+	return ders_sonuc, ders_sonuc_ad
 
 def kampus_secme(dersler, kampus_index):
 	ayazaga = ['DEP', 'BEB', 'DMB', 'EEB', 'FEB', 'GDB', 'HVZ', 'INB', 'KSB', 'KMB', 'KORT', 'MED', 'MEDB', 'MDB', 'MOB', 'PYB', 'RSLN-M', 'SLN-M', 'SDKM', 'SMB', 'STD', 'SYM', 'UUB', 'UZEM', 'YDB', 'MOBGAM', 'ENB', 'HLB']
@@ -291,7 +292,7 @@ def program_olustur(bolum, dersler, app = None):
 		if (len(istenen_ders_adlari) > len(eklenen_dersler.dersler)):
 			#print(f'istenen_ders_adlari: {istenen_ders_adlari}, eklenen_dersler.dersler: {eklenen_dersler.dersler}')
 			dersler = karistir(dersler)
-			program_olustur(bolum, dersler, app = app)
+			return program_olustur(bolum, dersler, app = app)
 
 		else:
 			for _ders in eklenen_dersler.dersler:
@@ -301,16 +302,15 @@ def program_olustur(bolum, dersler, app = None):
 
 			if not hash_kontrol(hashler, hash_olustur(eklenen_dersler.dersler)):
 				hashler.append(hash_olustur(eklenen_dersler.dersler))			
-				app.tabloyuDoldur(gunler)				
+				app.tabloyuDoldur(gunler)
+				return (eklenen_dersler.dersler, len(istenen_ders_adlari))				
 			else:
 				dersler = karistir(dersler)
-				program_olustur(bolum, dersler, app = app)
-
-		return (eklenen_dersler.dersler, len(istenen_ders_adlari))
+				return program_olustur(bolum, dersler, app = app)		
 		
 	except RecursionError:		
 		dp_gui.popup_olustur('Girilen dersler ile program oluşturulamıyor!', 'Tamam')
-		return None
+		return (None, None)
 
 def programi_yazdir(gunler):
 	ders_programi = [["" for i in range(len(gunler[0].saatler))] for j in range(len(gunler))]

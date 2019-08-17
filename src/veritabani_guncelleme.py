@@ -11,7 +11,7 @@ def duzeltme(duzeltilecek):
 
 def db_guncelle(app = None):
 
-	path = os.path.dirname(os.path.abspath(__file__))
+	path = os.getcwd()
 	path_to_check = path + r"\veritabani"
 
 	if not os.path.exists(path_to_check):

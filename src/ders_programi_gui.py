@@ -4,11 +4,12 @@ import fonksiyonlar as func
 import veritabani_guncelleme as db
 from PyQt5.QtWidgets import QApplication, QLabel, QTableWidget, QTableWidgetItem, QVBoxLayout, QGridLayout, QAction, QMainWindow, QWidget, QPushButton, QComboBox, QLineEdit, QMenuBar, QCheckBox, QDialog
 from PyQt5.QtCore import pyqtSlot, Qt
+import os.path
 
 class App(QWidget):
 	def __init__(self, gunler):
 		super().__init__()
-		self.title = 'Ders Programı Oluşturucu'
+		self.title = 'Oto Ders Programi'
 		self.left = 400
 		self.right = 200
 		self.width = 660
@@ -16,6 +17,7 @@ class App(QWidget):
 		self.cboxSayisi = 0
 		self.cboxBaseSayi = 8
 		self.ders_labellar = []
+		self.programdaki_dersler = None
 		self.initUI(gunler)
 
 	def initUI(self, gunler):
@@ -27,10 +29,14 @@ class App(QWidget):
 
 		self.main_menu = QMenuBar()
 		ayarlar_menu = self.main_menu.addMenu('Ayarlar')
+
 		db_guncelleme = QAction('Veritabanını Güncelle', self)
 		ayarlar_menu.addAction(db_guncelleme)
-
 		db_guncelleme.triggered.connect(db.db_guncelle)
+
+		kayit_temizle = QAction('Kaydedilmis Programlari Temizle', self)
+		ayarlar_menu.addAction(kayit_temizle)
+		kayit_temizle.triggered.connect(self.kayitlariTemizle)
 
 		self.dersKoduLbl = QLabel('Bölüm kodunuzu giriniz: ')
 		self.dersKoduInput = QLineEdit(self)
@@ -60,6 +66,10 @@ class App(QWidget):
 		self.programOlusturmaButonu.setToolTip('Ders programı oluşturmak için tıklayın.')
 		self.programOlusturmaButonu.clicked.connect(self.programOlustur)
 
+		self.programKaydetmeButonu = QPushButton('Programı Kaydet', self)
+		self.programKaydetmeButonu.setToolTip('Ders programını kaydetmek için tıklayın.')
+		self.programKaydetmeButonu.clicked.connect(self.programiKaydet)
+
 		self.layout = QGridLayout()
 		self.layout.addWidget(self.main_menu, 0, 0, 1, 10)
 		self.layout.addWidget(self.dersKoduLbl, 1, 0, 1, 2)
@@ -78,9 +88,10 @@ class App(QWidget):
 		self.layout.addWidget(self.cuma_check, 5, 8, 1, 2)
 		self.layout.addWidget(self.crn_input_text, 6, 0, 1, 10)
 		self.layout.addWidget(self.crn_input, 7, 0, 1, 10)
-		self.layout.addWidget(self.programOlusturmaButonu, 101, 3, 1, 4)
-		self.layout.addWidget(self.tableWidget, 100, 0, 1, 10)
-		self.layout.addWidget(self.dersEklemeButonu, 99, 3, 1, 4)
+		self.layout.addWidget(self.programOlusturmaButonu, 1001, 1, 1, 3)
+		self.layout.addWidget(self.programKaydetmeButonu, 1001, 6, 1, 3)	
+		self.layout.addWidget(self.tableWidget, 1000, 0, 1, 10)
+		self.layout.addWidget(self.dersEklemeButonu, 999, 3, 1, 4)
 		self.setLayout(self.layout)
 
 		self.show()
@@ -89,10 +100,6 @@ class App(QWidget):
 		if len(widgetlar) > 0:
 			for widget in widgetlar:
 				widget.close()
-
-	def cboxSil(self, widgetlar):
-		self.cboxSayisi -= 1
-		self.widgetSil(widgetlar)
 
 	def labelTemizle(self):
 		self.widgetSil(self.ders_labellar)
@@ -112,7 +119,7 @@ class App(QWidget):
 
 		cboxKod.activated[str].connect(lambda text: self.kodDegisti(text, cboxDers))
 		cboxDers.activated[str].connect(lambda text : self.dersDegisti(text, cboxHoca))
-		cboxSilmeButonu.clicked.connect(lambda _: self.cboxSil([cboxKod, cboxDers, cboxSilmeButonu, cboxHoca]))
+		cboxSilmeButonu.clicked.connect(lambda _: self.widgetSil([cboxKod, cboxDers, cboxSilmeButonu, cboxHoca]))
 		self.layout.addWidget(cboxKod, self.cboxSayisi + self.cboxBaseSayi, 0, 1, 2)
 		self.layout.addWidget(cboxDers, self.cboxSayisi + self.cboxBaseSayi, 2, 1, 2)
 		self.layout.addWidget(cboxHoca, self.cboxSayisi + self.cboxBaseSayi, 4, 1, 4)
@@ -165,7 +172,7 @@ class App(QWidget):
 		self.labelTemizle()		
 
 		for ders in dersler:
-			print(ders.ad, flush = True)
+			print(ders.ad)
 			yeni_label = QLabel(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}')
 			self.ders_labellar.append(yeni_label)
 			self.layout.addWidget(yeni_label, (99 - len(self.ders_labellar)), 0, 1, 10)
@@ -197,13 +204,43 @@ class App(QWidget):
 		else:
 			return dersler
 
+	def kayitlariTemizle(self):
+		path = os.getcwd()
+		path_to_check = path + r"\kayitlar"
+
+		if not os.path.exists(path_to_check):
+			os.mkdir(path_to_check)
+
+		open('kayitlar/kayitli_programlar.txt', 'w').close()
+
+		popup_olustur('Kayitlar temizlendi!', 'Tamam')
+
+	@pyqtSlot()
+	def programiKaydet(self):
+		if not self.programdaki_dersler == None:
+			path = os.getcwd()
+			path_to_check = path + r"\kayitlar"
+
+			if not os.path.exists(path_to_check):
+				os.mkdir(path_to_check)
+
+			f = open('kayitlar/kayitli_programlar.txt', 'a+')
+
+			for ders in self.programdaki_dersler:
+				f.write(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}\n')
+
+			f.write('\n\n')
+			f.close()
+		else:
+			popup_olustur('Programınız boş olduğu için kaydedilemiyor!', 'Tamam')
+
 	@pyqtSlot()
 	def programOlustur(self):
 		children = self.findChildren(QComboBox)
 		istenen_dersler, istenen_hocalar = [], []
 		bolum = self.dersKoduInput.text().upper()
 		istenen_crnler = func.ayirma(self.crn_input.text()) #crn girdisi		
-		istenen_crn_dersler = func.crn_kontrol(istenen_crnler)
+		istenen_crn_dersler, istenen_crn_adlar = func.crn_kontrol(istenen_crnler)
 		derslerListe = func.dersleri_cek() #tum dersler
 
 		for child in children:
@@ -218,10 +255,10 @@ class App(QWidget):
 		dersler_gonderilecek = []
 
 		for _ders in derslerListe.dersler:
-			if _ders.ad in istenen_dersler:
+			if (_ders.ad in istenen_dersler) and (_ders.ad not in istenen_crn_adlar):
 				dersler_elenecek.append(_ders) 
 
-		for ders_adi in istenen_dersler: 
+		for ders_adi in istenen_dersler:
 			dersler_hoca_elenecek = []
 
 			for _ders in dersler_elenecek:
@@ -249,6 +286,8 @@ class App(QWidget):
 			if isinstance(programdaki_dersler, list):
 				programdaki_dersler.sort(key = lambda ders: ders.ad, reverse = True)
 			self.dersLabelleriniKoy(programdaki_dersler)
+
+		self.programdaki_dersler = programdaki_dersler
 
 	@pyqtSlot()
 	def cboxEkleme(self):
