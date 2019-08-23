@@ -309,7 +309,7 @@ def program_olustur(bolum, dersler, app = None):
 				return program_olustur(bolum, dersler, app = app)		
 		
 	except RecursionError:		
-		dp_gui.popup_olustur('Girilen dersler ile program oluşturulamıyor!', 'Tamam')
+		dp_gui.popup_olustur('Girilen dersler ile program oluşturulamıyor!', 'Tamam', 'Program')
 		return (None, None)
 
 def programi_yazdir(gunler):

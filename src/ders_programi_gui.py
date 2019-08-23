@@ -213,7 +213,7 @@ class App(QWidget):
 
 		open('kayitlar/kayitli_programlar.txt', 'w').close()
 
-		popup_olustur('Kayitlar temizlendi!', 'Tamam')
+		popup_olustur('Kayitlar temizlendi!', 'Tamam', 'Kayitlar')
 
 	@pyqtSlot()
 	def programiKaydet(self):
@@ -232,7 +232,7 @@ class App(QWidget):
 			f.write('\n\n')
 			f.close()
 		else:
-			popup_olustur('Programınız boş olduğu için kaydedilemiyor!', 'Tamam')
+			popup_olustur('Programınız boş olduğu için kaydedilemiyor!', 'Tamam', 'Guncelleme')
 
 	@pyqtSlot()
 	def programOlustur(self):
@@ -308,8 +308,9 @@ class DersProgramGUI:
 	def update_GUI(gunler):
 		self.executable.tabloyuDoldur(gunler)
 
-def popup_olustur(popup_text, buton_text):
+def popup_olustur(popup_text, buton_text, baslik):
 	popup = QDialog()
+	popup.setWindowTitle(baslik)
 	layout = QVBoxLayout()
 	label = QLabel(popup_text, popup)
 	buton = QPushButton(buton_text, popup)

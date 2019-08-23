@@ -1,0 +1,29 @@
+10843, TUR101, ***, Carsamba, 1030/1229, MED, A35
+11457, MAT271E, ***, Cuma, 0830/1129, EEB, 5304
+10442, MAT104E, ***, ['Persembe', 'Cuma'], ['0830/1129', '1430/1629'], ['MED', 'MED'], ['A33', 'A33']
+10282, FIZ102E, ***, Pazartesi, 1430/1729, MED, A34
+10881, FIZ101EL, ***, Sali, 1530/1729, FEB, LAB-F
+11085, EHB101E, MustafaErgen, Carsamba, 1330/1529, EEB, 5304
+10689, CIN102, Shih-YinChen, Sali, 0830/1229, MED, B32
+
+
+10871, TUR101, ***, Carsamba, 1030/1229, MED, A36
+11460, MAT271E, ***, Cuma, 0830/1129, EEB, 2106
+10441, MAT104E, ***, ['Persembe', 'Cuma'], ['0830/1129', '1430/1629'], ['MED', 'MED'], ['A14', 'A14']
+10277, FIZ102E, ***, Persembe, 1430/1729, MED, A33
+10355, FIZ101EL, ***, Sali, 1530/1729, FEB, L2F2
+11997, EHB110E, ***, ['Pazartesi', 'Pazartesi'], ['1330/1529', '1530/1729'], ['EEB', 'EEB'], ['5107', '6307']
+11085, EHB101E, MustafaErgen, Carsamba, 1330/1529, EEB, 5304
+10689, CIN102, Shih-YinChen, Sali, 0830/1229, MED, B32
+
+
+10843, TUR101, ***, Carsamba, 1030/1229, MED, A35
+11457, MAT271E, ***, Cuma, 0830/1129, EEB, 5304
+10441, MAT104E, ***, ['Persembe', 'Cuma'], ['0830/1129', '1430/1629'], ['MED', 'MED'], ['A14', 'A14']
+10277, FIZ102E, ***, Persembe, 1430/1729, MED, A33
+10903, FIZ101EL, ***, Sali, 1330/1529, FEB, L2F4
+11997, EHB110E, ***, ['Pazartesi', 'Pazartesi'], ['1330/1529', '1530/1729'], ['EEB', 'EEB'], ['5107', '6307']
+11085, EHB101E, MustafaErgen, Carsamba, 1330/1529, EEB, 5304
+10689, CIN102, Shih-YinChen, Sali, 0830/1229, MED, B32
+
+
