@@ -2,14 +2,14 @@ import ders_class as ders
 import gun_class as gun
 import fonksiyonlar as func
 import veritabani_guncelleme as db
-from PyQt5.QtWidgets import QApplication, QLabel, QTableWidget, QTableWidgetItem, QVBoxLayout, QGridLayout, QAction, QMainWindow, QWidget, QPushButton, QComboBox, QLineEdit, QMenuBar, QCheckBox, QDialog
+from PyQt5.QtWidgets import QApplication, QLabel, QTableWidget, QTableWidgetItem, QVBoxLayout, QGridLayout, QAction, QWidget, QPushButton, QComboBox, QLineEdit, QMenuBar, QCheckBox, QDialog
 from PyQt5.QtCore import pyqtSlot, Qt
 import os.path
 
 class App(QWidget):
 	def __init__(self, gunler):
 		super().__init__()
-		self.title = 'Oto Ders Programi'
+		self.title = 'Programci'
 		self.left = 400
 		self.right = 200
 		self.width = 660
@@ -92,8 +92,8 @@ class App(QWidget):
 		self.layout.addWidget(self.programKaydetmeButonu, 1001, 6, 1, 3)	
 		self.layout.addWidget(self.tableWidget, 1000, 0, 1, 10)
 		self.layout.addWidget(self.dersEklemeButonu, 999, 3, 1, 4)
-		self.setLayout(self.layout)
 
+		self.setLayout(self.layout)
 		self.show()
 
 	def widgetSil(self, widgetlar):
@@ -229,6 +229,7 @@ class App(QWidget):
 			for ders in self.programdaki_dersler:
 				f.write(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}\n')
 
+			f.write(f'CRNler: {",".join(ders.crn for ders in self.programdaki_dersler)}\n')
 			f.write('\n\n')
 			f.close()
 		else:
