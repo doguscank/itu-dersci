@@ -239,7 +239,7 @@ def program_olustur(bolum, dersler, app = None):
 
 			if bolum == "":
 				alabilir = True
-			elif not "Tüm Lisans ve Lisansüstü Programlar" in _ders.alabilen:
+			elif not "Tum Lisans ve Lisansustu Programlar" in _ders.alabilen:
 				alabilen_bolumler = ayirma(_ders.alabilen)
 				if bolum.upper() in alabilen_bolumler:
 					alabilir = True

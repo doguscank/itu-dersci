@@ -80,9 +80,9 @@ def db_guncelle(app = None):
 
 			if not td_list[11].string is None:
 				if ',' in td_list[11].string:
-					ders.alabilen = td_list[11].string.split(',')
+					ders.alabilen = duzeltme(td_list[11].string).split(',')
 				else:
-					ders.alabilen = td_list[11].string
+					ders.alabilen = duzeltme(td_list[11].string)
 			else:
 				ders.alabilen = ""
 			#print(f"crn: {ders.crn}\nad: {ders.ad}\nhoca: {ders.hoca}\nkontejan: {ders.kontenjan}\ngünler: {ders.gunler}\nsaatler: {ders.saatler}\nsınıflar: {ders.siniflar}\nalabilenler: {ders.alabilen}")
