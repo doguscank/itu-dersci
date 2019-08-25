@@ -30,7 +30,7 @@ class App(QWidget):
 		self.main_menu = QMenuBar()
 		ayarlar_menu = self.main_menu.addMenu('Ayarlar')
 
-		db_guncelleme = QAction('Veritabanını Güncelle', self)
+		db_guncelleme = QAction('Veritabanini Guncelle', self)
 		ayarlar_menu.addAction(db_guncelleme)
 		db_guncelleme.triggered.connect(db.db_guncelle)
 
@@ -38,10 +38,10 @@ class App(QWidget):
 		ayarlar_menu.addAction(kayit_temizle)
 		kayit_temizle.triggered.connect(self.kayitlariTemizle)
 
-		self.dersKoduLbl = QLabel('Bölüm kodunuzu giriniz: ')
+		self.dersKoduLbl = QLabel('Bolum kodunuzu giriniz: ')
 		self.dersKoduInput = QLineEdit(self)
 
-		self.gun_label = QLabel('Boş bırakmak istediğiniz günleri seçiniz:', self)
+		self.gun_label = QLabel('Bos birakmak istediginiz gunleri seciniz:', self)
 		self.pzt_check = QCheckBox('Pazartesi', self)
 		self.sali_check = QCheckBox('Sali', self)
 		self.crs_check = QCheckBox('Carsamba', self)
@@ -55,19 +55,19 @@ class App(QWidget):
 		self.gumussuyu_check = QCheckBox('Gumussuyu', self)
 		self.taskisla_check = QCheckBox('Taskisla', self)
 
-		self.crn_input_text = QLabel("CRN'leri virgül ile ayırarak giriniz:", self)
+		self.crn_input_text = QLabel("CRN'leri virgul ile ayirarak giriniz:", self)
 		self.crn_input = QLineEdit(self)
 
 		self.dersEklemeButonu = QPushButton('Ders Ekle', self)
-		self.dersEklemeButonu.setToolTip('Ders eklemek için tıklayın.')
+		self.dersEklemeButonu.setToolTip('Ders eklemek icin tiklayin.')
 		self.dersEklemeButonu.clicked.connect(self.cboxEkleme)
 
-		self.programOlusturmaButonu = QPushButton('Program Oluştur', self)
-		self.programOlusturmaButonu.setToolTip('Ders programı oluşturmak için tıklayın.')
+		self.programOlusturmaButonu = QPushButton('Program Olustur', self)
+		self.programOlusturmaButonu.setToolTip('Ders programi olusturmak icin tiklayin.')
 		self.programOlusturmaButonu.clicked.connect(self.programOlustur)
 
-		self.programKaydetmeButonu = QPushButton('Programı Kaydet', self)
-		self.programKaydetmeButonu.setToolTip('Ders programını kaydetmek için tıklayın.')
+		self.programKaydetmeButonu = QPushButton('Programi Kaydet', self)
+		self.programKaydetmeButonu.setToolTip('Ders programini kaydetmek icin tiklayin.')
 		self.programKaydetmeButonu.clicked.connect(self.programiKaydet)
 
 		self.layout = QGridLayout()
@@ -139,7 +139,7 @@ class App(QWidget):
 
 	def tabloyuDoldur(self, gunler):
 		for i in range(1, len(gunler[0].saatler) + 1, 1):
-			self.tableWidget.setItem(i, 0, QTableWidgetItem(f"{gunler[0].saatler[i - 1].saat}:30 - {int(gunler[0].saatler[i - 1].saat) + 1}:30"))
+			self.tableWidget.setItem(i, 0, QTableWidgetItem(f'{gunler[0].saatler[i - 1].saat}:30 - {int(gunler[0].saatler[i - 1].saat) + 1}:30'))
 
 		for i in range(len(gunler)):
 			for j in range(len(gunler[i].saatler) + 1):
@@ -173,13 +173,13 @@ class App(QWidget):
 
 		for ders in dersler:
 			print(ders.ad)
-			yeni_label = QLabel(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}')
+			yeni_label = QLabel(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}, {func.ayirma(ders.dolu_kontenjan)}/{func.ayirma(ders.kontenjan)}')
 			self.ders_labellar.append(yeni_label)
 			self.layout.addWidget(yeni_label, (99 - len(self.ders_labellar)), 0, 1, 10)
 			self.setLayout(self.layout)
 
 	def gunleriAyikla(self, dersler):
-		gun_adlari = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma"]
+		gun_adlari = ["Pazartesi", "Sali", "Carsamba", "Persembe", "Cuma"]
 		gun_cb = [self.pzt_check, self.sali_check, self.crs_check, self.prs_check, self.cuma_check]
 		yeni_dersler = dersler
 		for i in range(len(gun_cb)):
@@ -227,13 +227,13 @@ class App(QWidget):
 			f = open('kayitlar/kayitli_programlar.txt', 'a+')
 
 			for ders in self.programdaki_dersler:
-				f.write(f'{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}\n')
+				f.write(f"{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar), {func.ayirma(ders.dolu_kontenjan)}/{func.ayirma(ders.kontenjan)}}\n")
 
 			f.write(f'CRNler: {",".join(ders.crn for ders in self.programdaki_dersler)}\n')
 			f.write('\n\n')
 			f.close()
 		else:
-			popup_olustur('Programınız boş olduğu için kaydedilemiyor!', 'Tamam', 'Guncelleme')
+			popup_olustur('Programiniz bos oldugu icin kaydedilemiyor!', 'Tamam', 'Guncelleme')
 
 	@pyqtSlot()
 	def programOlustur(self):
@@ -295,7 +295,7 @@ class App(QWidget):
 		if self.cboxSayisi <= 10:
 			self.comboboxEkle()
 		else:
-			print("Maksimum ders sayısına ulaşıldı!")
+			print("Maksimum ders sayisina ulasildi!")
 
 class DersProgramGUI:
 	def __init__(self, gunler):
@@ -321,3 +321,16 @@ def popup_olustur(popup_text, buton_text, baslik):
 	popup.setLayout(layout)
 	popup.setModal(True)
 	popup.exec_()
+
+if __name__ == '__main__':
+	pzt = gun.Gun("Pazartesi")
+	sali = gun.Gun("Sali")
+	crs = gun.Gun("Carsamba")
+	prs = gun.Gun("Persembe")
+	cuma = gun.Gun("Cuma")
+	
+	gunler = [pzt, sali, crs, prs, cuma]
+
+	app = QApplication([])
+	exe_ = App(gunler)
+	app.exec_()

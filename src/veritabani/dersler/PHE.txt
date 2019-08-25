@@ -1,2 +1,2 @@
-13604;PHE 101;Hakan  Cap;45;['Pazartesi '];['1130/1329 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
-13559;PHE 101;Kadir Can Cakici;45;['Cuma '];['1030/1229 '];['D407 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
+13604;PHE 101;Hakan  Cap;0;45;['Pazartesi '];['1130/1329 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13559;PHE 101;Kadir Can Cakici;0;45;['Cuma '];['1030/1229 '];['D407 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']

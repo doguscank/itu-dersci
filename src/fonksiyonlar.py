@@ -48,7 +48,7 @@ def dersleri_cek():
 				break
 			else:
 				ders_bilgisi = bilgi_satir.split(";")
-				yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[4], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[3], ders_bilgisi[7], ders_bilgisi[8])
+				yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[7], ders_bilgisi[3], ders_bilgisi[4], ders_bilgisi[8], ders_bilgisi[9])
 				dersler.dersler.append(yeni_ders)
 				dersler.crnler.append(ders_bilgisi[0])
 				dersler.adlar.append(ders_bilgisi[1])
@@ -69,7 +69,7 @@ def ders_cek(ders_kodu):
 			break
 		else:
 			ders_bilgisi = bilgi_satir.split(";")
-			yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[4], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[3], ders_bilgisi[7], ders_bilgisi[8])
+			yeni_ders = ders.Ders(ders_bilgisi[0], ders_bilgisi[1], ders_bilgisi[2], ders_bilgisi[5], ders_bilgisi[6], ders_bilgisi[7], ders_bilgisi[3], ders_bilgisi[4], ders_bilgisi[8], ders_bilgisi[9])
 			dersler.dersler.append(yeni_ders)
 			dersler.crnler.append(ders_bilgisi[0])
 			dersler.adlar.append(ders_bilgisi[1])

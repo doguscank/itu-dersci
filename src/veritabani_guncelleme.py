@@ -59,11 +59,12 @@ def db_guncelle(app = None):
 			for td in soup.find_all('tr')[j].find_all('td'):
 				td_list.append(td)
 			
-			ders = ders_class.Ders("crn", "ad", "hoca", [], [], [], "kontenjan", [], [])
+			ders = ders_class.Ders("crn", "ad", "hoca", [], [], [], "dolu_kontenjan","kontenjan", [], [])
 
 			ders.crn = td_list[0].string
 			ders.ad = duzeltme(td_list[1].string)
 			ders.hoca = duzeltme(td_list[3].string)
+			ders.dolu_kontenjan = duzeltme(td_list[9].string)
 			ders.kontenjan = duzeltme(td_list[8].string)
 
 			gun_sayisi = len(td_list[5].find_all('br'))
@@ -88,7 +89,7 @@ def db_guncelle(app = None):
 			dersler.append(ders)
 
 			f = open(f"veritabani/dersler/{ders_kodu}.txt", "a")
-			f.write(f"{ders.crn};{ders.ad};{ders.hoca};{ders.kontenjan};{ders.gunler};{ders.saatler};{ders.siniflar};{ders.alabilen};{ders.binalar}\n")
+			f.write(f"{ders.crn};{ders.ad};{ders.hoca};{ders.dolu_kontenjan};{ders.kontenjan};{ders.gunler};{ders.saatler};{ders.siniflar};{ders.alabilen};{ders.binalar}\n")
 			f.close()
 
-	dp_gui.popup_olustur('Veritabanı başarıyla güncellendi!', 'Tamam')
+	dp_gui.popup_olustur('Veritabani basariyla guncellendi!', 'Tamam', 'Veritabani')

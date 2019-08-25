@@ -1,2 +1,2 @@
-13522;COM 101;Ali Sinan Cabuk;40;['Sali '];['1330/1729 '];['6307 '];['GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['EEB']
-13602;COM 101;Ata  Bilgili;45;['Carsamba '];['0830/1229 '];['--- '];['GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13522;COM 101;Ali Sinan Cabuk;0;40;['Sali '];['1330/1729 '];['6307 '];['GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['EEB']
+13602;COM 101;Ata  Bilgili;0;45;['Carsamba '];['0830/1229 '];['--- '];['GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']

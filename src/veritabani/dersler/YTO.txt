@@ -1,1 +1,1 @@
-13654;YTO 101;Ozge  Seckin Polat;30;['Cuma '];['0830/1229 '];['102 '];Yabancý Uyruklu Tüm Lisans ve Lisansüstü Öðrenciler;['MEDB']
+13654;YTO 101;Ozge  Seckin Polat;0;30;['Cuma '];['0830/1229 '];['102 '];Yabancý Uyruklu Tüm Lisans ve Lisansüstü Öðrenciler;['MEDB']

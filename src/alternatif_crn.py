@@ -1,6 +1,6 @@
 import fonksiyonlar as func
 import ders_class as ders
-from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QLabel, QApplication, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QLabel, QApplication, QVBoxLayout, QCheckBox
 from PyQt5.QtCore import pyqtSlot, Qt
 from ders_programi_gui import popup_olustur
 
@@ -22,16 +22,17 @@ class App(QWidget):
 		self.crn_giris_label = QLabel('CRNleri virgul ile ayirarak giriniz:', self)
 		self.crn_giris = QLineEdit(self)
 		self.crn_getir = QPushButton('Alternatif Getir', self)
-
 		self.crn_getir.clicked.connect(lambda _: self.alternatif_getir(self.crn_giris.text()))
 
 		self.alt_kaydet = QPushButton('Alternatifleri Kaydet', self)
-
 		self.alt_kaydet.clicked.connect(lambda _: self.kaydet(self.crn_giris.text()))
+
+		self.kontenjan_bos = QCheckBox('Bos kontenjani olsun')
 
 		self.layout = QVBoxLayout()
 		self.layout.addWidget(self.crn_giris_label)
 		self.layout.addWidget(self.crn_giris)
+		self.layout.addWidget(self.kontenjan_bos)
 		self.layout.addWidget(self.crn_getir)
 		self.layout.addWidget(self.alt_kaydet)
 
@@ -62,7 +63,11 @@ class App(QWidget):
 			for ders in dersler:
 				for _ders in referans_dersler:
 					if ders.ad == _ders.ad and ders.gunler == _ders.gunler and ders.saatler == _ders.saatler and (ders not in alternatif_dersler):
-						alternatif_dersler.append(ders)
+						if self.kontenjan_bos.isChecked():
+							if ders.dolu_kontenjan < ders.kontenjan:
+								alternatif_dersler.append(ders)
+						else:
+							alternatif_dersler.append(ders)
 
 			return alternatif_dersler
 

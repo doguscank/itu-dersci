@@ -1,0 +1,5 @@
+14725;CIE 305;Himmet  Karaman;0;40;['Pazartesi ', 'Sali '];['0830/1129 ', '0830/1029 '];['B101 ', 'A204 '];SIN;['INB', 'INB']
+14726;CIE 307;Burcu  Gunes;0;40;['Sali ', 'Persembe '];['1030/1229 ', '0830/1129 '];['--- ', '--- '];SIN;['INB', 'INB']
+14730;CIE 308;Kemal Selcuk Ogut;0;40;['Pazartesi ', 'Persembe '];['1330/1429 ', '1330/1529 '];['A103 ', 'A101 '];SIN;['INB', 'INB']
+14727;CIE 329;Yilmaz  Akkaya;0;40;['Pazartesi ', 'Sali '];['1430/1629 ', '1330/1629 '];['--- ', '--- '];SIN;['INB', 'INB']
+14729;CIE 354;Ismail  Duranyildiz;0;40;['Cuma '];['0830/1129 '];['--- '];['SCE', ' SIN'];['INB']

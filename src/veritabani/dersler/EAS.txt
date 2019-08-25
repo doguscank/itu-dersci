@@ -1,1 +1,1 @@
-13355;EAS 111;Melek  Ertogan;10;['Sali '];['1030/1329 '];['--- '];SDU;['DZB']
+13355;EAS 111;Melek  Ertogan;0;10;['Sali '];['1030/1329 '];['--- '];SDU;['DZB']

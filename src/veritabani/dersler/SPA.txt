@@ -1,1 +1,1 @@
-13476;SPA 101;Safiye Neslihan Ercan;40;['Pazartesi '];['1330/1629 '];['YDRAP '];['SMT', ' STP'];['MKB']
+13476;SPA 101;Safiye Neslihan Ercan;0;40;['Pazartesi '];['1330/1629 '];['YDRAP '];['SMT', ' STP'];['MKB']

@@ -1,2 +1,2 @@
-10553;GSB 343;Ferhan  Gozgu Celik;12;['Sali '];['1330/1629 '];['RESATOLYE1 '];['ICM', ' MIM', ' PEM', ' SBP'];['MMB']
-10554;GSB 363;Aynur  Karakas Karaagac;12;['Persembe '];['0830/1129 '];['SER-ATELYE '];['ICM', ' MIM', ' PEM', ' SBP'];['MMB']
+10553;GSB 343;Ferhan  Gozgu Celik;0;12;['Sali '];['1330/1629 '];['RESATOLYE1 '];['ICM', ' MIM', ' PEM', ' SBP'];['MMB']
+10554;GSB 363;Aynur  Karakas Karaagac;0;12;['Persembe '];['0830/1129 '];['SER-ATELYE '];['ICM', ' MIM', ' PEM', ' SBP'];['MMB']
