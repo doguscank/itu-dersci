@@ -1,5 +1,6 @@
 import fonksiyonlar as func
 import ders_class as ders
+import os
 import veritabani_guncelleme as db_guncelle
 from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QLabel, QApplication, QVBoxLayout, QCheckBox
 from PyQt5.QtCore import pyqtSlot, Qt
