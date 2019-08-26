@@ -230,7 +230,7 @@ class App(QWidget):
 			f = open('kayitlar/kayitli_programlar.txt', 'a+')
 
 			for ders in self.programdaki_dersler:
-				f.write(f"{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar), {func.ayirma(ders.dolu_kontenjan)}/{func.ayirma(ders.kontenjan)}}\n")
+				f.write(f"{func.ayirma(ders.crn)}, {func.ayirma(ders.ad)}, {func.ayirma(ders.hoca)}, {func.ayirma(ders.gunler)}, {func.ayirma(ders.saatler)}, {func.ayirma(ders.binalar)}, {func.ayirma(ders.siniflar)}, {func.ayirma(ders.dolu_kontenjan)}/{func.ayirma(ders.kontenjan)}\n")
 
 			f.write(f'CRNler: {",".join(ders.crn for ders in self.programdaki_dersler)}\n')
 			f.write('\n\n')
@@ -240,6 +240,12 @@ class App(QWidget):
 
 	@pyqtSlot()
 	def programOlustur(self):
+		cwd = os.getcwd()
+		path_to_check = cwd + r"\veritabani\dersler"
+
+		if not os.path.exists(path_to_check):
+			db.db_guncelle()
+
 		children = self.findChildren(QComboBox)
 		istenen_dersler, istenen_hocalar = [], []
 		bolum = self.dersKoduInput.text().upper()

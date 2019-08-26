@@ -1,5 +1,5 @@
 10744;ISP 101;Maria Victoria Galvez Frutos;20;20;['Sali '];['1330/1729 '];['5106 '];Tum Lisans ve Lisansustu Programlar;['EEB']
-10742;ISP 101;Maria Victoria Galvez Frutos;13;20;['Cuma '];['0830/1229 '];['--- '];Tum Lisans ve Lisansustu Programlar;['DIB']
+10742;ISP 101;Maria Victoria Galvez Frutos;16;20;['Cuma '];['0830/1229 '];['--- '];Tum Lisans ve Lisansustu Programlar;['DIB']
 10740;ISP 102;Maria Victoria Galvez Frutos;8;25;['Sali '];['0830/1229 '];['B36 '];Tum Lisans ve Lisansustu Programlar;['MED']
 10751;ISP 201;Maria Victoria Galvez Frutos;6;30;['Cuma '];['1330/1729 '];['--- '];Tum Lisans ve Lisansustu Programlar;['DIB']
 10741;ISP 202;Maria Victoria Galvez Frutos;4;25;['Carsamba '];['0830/1229 '];['--- '];Tum Lisans ve Lisansustu Programlar;['DIB']

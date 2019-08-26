@@ -1,5 +1,6 @@
 import fonksiyonlar as func
 import ders_class as ders
+import veritabani_guncelleme as db_guncelle
 from PyQt5.QtWidgets import QWidget, QPushButton, QLineEdit, QLabel, QApplication, QVBoxLayout, QCheckBox
 from PyQt5.QtCore import pyqtSlot, Qt
 from ders_programi_gui import popup_olustur
@@ -53,7 +54,12 @@ class App(QWidget):
 		kontrol = crn.isnumeric()
 
 		if kontrol:
-			dersler = func.dersleri_cek().dersler
+			try:
+				dersler = func.dersleri_cek().dersler
+			except Exception:
+				db_guncelle.db_guncelle()
+				dersler = func.dersleri_cek().dersler
+
 			referans_dersler, alternatif_dersler = [], []
 
 			for ders in dersler:
@@ -81,7 +87,11 @@ class App(QWidget):
 		return info
 
 	def label_ekle(self, dersler):
-		info = self.ders_info(dersler[0])
+		if isinstance(dersler, list) and len(dersler) > 0:
+			info = self.ders_info(dersler[0])
+		else:
+			info = None
+
 		if info != None:
 			ayirici = ','
 			crn_text = ayirici.join(ders.crn for ders in dersler)
@@ -93,6 +103,12 @@ class App(QWidget):
 
 	@pyqtSlot()
 	def kaydet(self, crnler):
+		path = os.getcwd()
+		path_to_check = path + r"\kayitlar"
+
+		if not os.path.exists(path_to_check):
+			os.mkdir(path_to_check)
+
 		f = open('kayitlar/alternatif_crnler.txt', 'a+')
 		crn_liste = func.ayirma(crnler)
 
@@ -101,7 +117,11 @@ class App(QWidget):
 				alt = self.dersleri_getir(crn)				
 				ayirici = ','
 				alt_text = ayirici.join(ders.crn for ders in alt)
-				info_text = self.ders_info(alt[0])
+
+				if len(alt) > 0 and isinstance(alt, list):
+					info_text = self.ders_info(alt[0])
+				else:
+					continue
 
 				f.write(f'{info_text}: {alt_text}\n')
 			f.write('\n\n')

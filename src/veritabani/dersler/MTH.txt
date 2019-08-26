@@ -17,6 +17,6 @@
 13498;MTH 123;***;6;25;['Sali '];['0830/1129 '];['--- '];STP;['MKB']
 11179;MTH 131;***;1;30;['Pazartesi ', 'Sali '];['1530/1729 ', '0830/1129 '];['A35 ', '5101 '];EHN;['MED', 'EEB']
 13618;MTH 203;Sabire  Comert;2;45;['Pazartesi '];['1330/1729 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
-13523;MTH 203;Mehmet Ali Karaca;4;50;['Sali '];['1130/1529 '];['A1 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['FEB']
+13523;MTH 203;Mehmet Ali Karaca;8;50;['Sali '];['1130/1529 '];['A1 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['FEB']
 11180;MTH 281;Ali  Yapar;0;30;['Cuma '];['0830/1129 '];['1303 '];EHN;['EEB']
 10964;MTH 301;Yusuf  Yaslan;10;45;['Persembe '];['0930/1229 '];['5301 '];SBL;['EEB']

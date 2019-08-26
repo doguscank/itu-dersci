@@ -1,6 +1,6 @@
 12712;IML 110;Ramazan Murat  Tabanli;0;70;['Carsamba '];['1330/1529 '];['D359 '];IML;['MKB']
 12713;IML 111;Ramazan Murat  Tabanli;1;70;['Carsamba '];['1230/1329 '];['D353 '];IML;['MKB']
-12714;IML 205;Yakup Erhan Boke;7;60;['Carsamba ', 'Cuma '];['1230/1329 ', '1030/1229 '];['D318 ', 'D318 '];IML;['MKB', 'MKB']
+12714;IML 205;Yakup Erhan Boke;8;60;['Carsamba ', 'Cuma '];['1230/1329 ', '1030/1229 '];['D318 ', 'D318 '];IML;['MKB', 'MKB']
 12715;IML 305;Ersin  Sayar;24;60;['Pazartesi ', 'Carsamba '];['0930/1029 ', '1030/1229 '];['--- ', '--- '];IML;['MKB', 'MKB']
 12716;IML 311;Safak  Yilmaz;43;65;['Sali ', 'Persembe '];['0830/1029 ', '1030/1229 '];['A101 ', 'A101 '];IML;['MKB', 'MKB']
 12717;IML 320;Ali Imre Aydeniz;40;40;['Sali ', 'Persembe '];['1230/1529 ', '1530/1729 '];['R358 ', 'R358 '];['IML', ' IMLM'];['MKB', 'MKB']

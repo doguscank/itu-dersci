@@ -1,5 +1,5 @@
-11017;ISH 202;Melek  Tuter, Nalan  Erdol Aydin;29;60;['Cuma '];['0930/1229 '];['D304 '];ISL;['KMB']
-11019;ISH 202E;Moiz  Elnekave;21;40;['Cuma '];['1330/1629 '];['D304 '];['ISL', ' ISLE'];['KMB']
+11017;ISH 202;Melek  Tuter, Nalan  Erdol Aydin;28;60;['Cuma '];['0930/1229 '];['D304 '];ISL;['KMB']
+11019;ISH 202E;Moiz  Elnekave;22;40;['Cuma '];['1330/1629 '];['D304 '];['ISL', ' ISLE'];['KMB']
 13193;ISH 301;Ayse Gul Tanik, Nevin  Yagci, Serdar  Dogruel;31;60;['Carsamba '];['1230/1529 '];['A105 '];ISL;['INB']
-13196;ISH 301E;Ayse Gul Tanik, Nevin  Yagci, Serdar  Dogruel;59;60;['Carsamba '];['0930/1229 '];['B101 '];['ISL', ' ISLE'];['INB']
+13196;ISH 301E;Ayse Gul Tanik, Nevin  Yagci, Serdar  Dogruel;60;60;['Carsamba '];['0930/1229 '];['B101 '];['ISL', ' ISLE'];['INB']
 11045;ISH 303E;Hatice Funda Karbancioglu Guler;50;50;['Cuma '];['0930/1229 '];['D204 '];['ISL', ' ISLE'];['KMB']

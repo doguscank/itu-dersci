@@ -13,7 +13,7 @@
 13907;TEB 3311;Serkan  Sener;0;10;['Sali '];['1330/1529 '];['--- '];TEB;['TMB']
 13906;TEB 3625;Ali Cihat Askin;0;5;['Carsamba '];['1030/1229 '];['--- '];TEB;['TMB']
 11882;TEB 4111;Ferda Cengiz Unal;1;15;['Sali ', 'Persembe '];['0830/1029 ', '1030/1229 '];['--- ', '--- '];TEB;['TMB', 'TMB']
-11880;TEB 4113;Eren  Ozek;1;15;['Pazartesi ', 'Persembe '];['1030/1229 ', '0830/1029 '];['--- ', '--- '];TEB;['TMB', 'TMB']
+11880;TEB 4113;Eren  Ozek;2;15;['Pazartesi ', 'Persembe '];['1030/1229 ', '0830/1029 '];['--- ', '--- '];TEB;['TMB', 'TMB']
 13909;TEB 4116;Suleyman  Senel;2;10;['Pazartesi ', 'Cuma '];['1030/1229 ', '1530/1729 '];['--- ', '--- '];['SES', ' TEB'];['TMB', 'TMB']
 11881;TEB 4711;Ali  Yayla;0;15;['Sali ', 'Persembe '];['1030/1229 ', '1330/1529 '];['--- ', '--- '];['CAB', ' KMP', ' MUT', ' MUZ', ' SES', ' TEB', ' THO'];['TMB', 'TMB']
 11849;TEB 492;Eren  Ozek;1;100;['---- '];['/ '];['--- '];TEB;['TMB']

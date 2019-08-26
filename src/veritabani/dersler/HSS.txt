@@ -1,2 +1,2 @@
-13634;HSS 301;Sabire  Comert;37;45;['Pazartesi '];['1730/2029 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
-13566;HSS 301;Emin  Korkut;14;45;['Carsamba '];['1230/1529 '];['D308 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']
+13634;HSS 301;Sabire  Comert;43;45;['Pazartesi '];['1730/2029 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13566;HSS 301;Emin  Korkut;18;45;['Carsamba '];['1230/1529 '];['D308 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['GDB']

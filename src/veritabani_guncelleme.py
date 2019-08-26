@@ -9,7 +9,7 @@ def duzeltme(duzeltilecek):
 	duzgun = duzeltilecek.translate(table)
 	return duzgun
 
-def db_guncelle(app = None):
+def db_guncelle():
 
 	path = os.getcwd()
 	path_to_check = path + r"\veritabani"
@@ -17,7 +17,6 @@ def db_guncelle(app = None):
 	if not os.path.exists(path_to_check):
 		os.mkdir(path_to_check)
 		os.mkdir(path_to_check + r"\dersler")
-		db_guncelle()
 
 	manager = urllib3.PoolManager(1)
 	url = 'http://www.sis.itu.edu.tr/tr/ders_programlari/LSprogramlar/prg.php?fb=MAT'
@@ -41,6 +40,8 @@ def db_guncelle(app = None):
 
 	for ders_kodu in ders_kodlari:
 		
+		print(f'{ders_kodu} veritabani guncelleniyor...')
+
 		url = f'http://www.sis.itu.edu.tr/tr/ders_programlari/LSprogramlar/prg.php?fb={ders_kodu}'
 
 		html = manager.urlopen('GET', url)
