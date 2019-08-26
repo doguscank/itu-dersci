@@ -1,2 +1,2 @@
-13611;NTH 103;Pelin  Helvaci;0;45;['Carsamba '];['1930/2129 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
-13557;NTH 103;Sait  Kofoglu;0;45;['Persembe '];['0830/1029 '];['A304 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['INB']
+13611;NTH 103;Pelin  Helvaci;10;45;['Carsamba '];['2030/2229 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+13557;NTH 103;Sait  Kofoglu;2;45;['Persembe '];['0830/1029 '];['A304 '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['INB']

@@ -1,4 +1,4 @@
-12123;ULP 101;--;0;500;['Pazartesi '];['1830/2029 '];['--- '];['MBI', ' MCB', ' SBL', ' SCE', ' SDU', ' SEK', ' SEN', ' SGM', ' SIN', ' SIS', ' SMT', ' STP'];['---']
+12123;ULP 101;--;6;500;['Pazartesi '];['1830/2029 '];['--- '];['MBI', ' MCB', ' SBL', ' SCE', ' SDU', ' SEK', ' SEN', ' SGM', ' SIN', ' SIS', ' SMT', ' STP'];['---']
 13358;ULP 101;Ata  Bilgili;0;0;['Pazartesi '];['1830/2029 '];['--- '];['MBI', ' MCB', ' SBL', ' SCE', ' SDU', ' SEK', ' SEN', ' SGM', ' SIN', ' SIS', ' SMT', ' STP'];['---']
 13458;ULP 101;Cevza  Candan;0;0;['Pazartesi '];['1830/2029 '];['--- '];['MBI', ' MCB', ' SBL', ' SCE', ' SDU', ' SEK', ' SEN', ' SGM', ' SIN', ' SIS', ' SMT', ' STP'];['---']
 13491;ULP 101;Osman Bulent Ozipek, Canan  Saricam;0;0;['Pazartesi '];['1830/2029 '];['--- '];['MBI', ' MCB', ' SBL', ' SCE', ' SDU', ' SEK', ' SEN', ' SGM', ' SIN', ' SIS', ' SMT', ' STP'];['---']

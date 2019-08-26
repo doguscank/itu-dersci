@@ -208,7 +208,7 @@ def kampus_secme(dersler, kampus_index):
 
 	return dersler_gonderilecek
 
-def program_olustur(bolum, dersler, app = None):
+def program_olustur(bolum, dersler, app = None, kontenjan = False):
 	try:
 		pzt = gun.Gun("Pazartesi")
 		sali = gun.Gun("Sali")
@@ -234,7 +234,8 @@ def program_olustur(bolum, dersler, app = None):
 		_dersler = app.gunleriAyikla(dersler)
 		_dersler = app.kampusleriAyikla(_dersler)
 
-		for _ders in _dersler:
+		for _ders in _dersler:				
+
 			alabilir = False
 
 			if bolum == "":
@@ -245,6 +246,9 @@ def program_olustur(bolum, dersler, app = None):
 					alabilir = True
 			else:
 				alabilir = True
+
+			if kontenjan:
+				alabilir = alabilir & (_ders.dolu_kontenjan < _ders.kontenjan)
 
 			if alabilir:	
 				if _ders.ad in eklenen_dersler.adlar:
@@ -292,7 +296,7 @@ def program_olustur(bolum, dersler, app = None):
 		if (len(istenen_ders_adlari) > len(eklenen_dersler.dersler)):
 			#print(f'istenen_ders_adlari: {istenen_ders_adlari}, eklenen_dersler.dersler: {eklenen_dersler.dersler}')
 			dersler = karistir(dersler)
-			return program_olustur(bolum, dersler, app = app)
+			return program_olustur(bolum, dersler, app = app, kontenjan = kontenjan)
 
 		else:
 			for _ders in eklenen_dersler.dersler:
@@ -306,7 +310,7 @@ def program_olustur(bolum, dersler, app = None):
 				return (eklenen_dersler.dersler, len(istenen_ders_adlari))				
 			else:
 				dersler = karistir(dersler)
-				return program_olustur(bolum, dersler, app = app)		
+				return program_olustur(bolum, dersler, app = app, kontenjan = kontenjan)		
 		
 	except RecursionError:		
 		dp_gui.popup_olustur('Girilen dersler ile program oluşturulamıyor!', 'Tamam', 'Program')

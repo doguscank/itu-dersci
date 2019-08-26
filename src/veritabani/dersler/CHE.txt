@@ -1,2 +1,3 @@
 14776;CHE 101;Sennur  Ozcelik;0;25;['Pazartesi ', 'Persembe '];['0830/1129 ', '0830/1029 '];['--- ', '--- '];['MBI', ' MCB', ' SCE', ' SEN', ' SIN', ' SIS'];['FEB', 'FEB']
+14777;CHE 101;Abdullah  Aydogan;2;25;['Pazartesi ', 'Persembe '];['0830/1129 ', '0830/1029 '];['--- ', '--- '];['MBI', ' MCB', ' SCE', ' SEN', ' SIN', ' SIS'];['FEB', 'FEB']
 11184;CHE 123;Metin Hayri Acar;0;30;['Pazartesi '];['0830/1129 '];['1301 '];EHN;['EEB']

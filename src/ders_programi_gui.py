@@ -55,6 +55,8 @@ class App(QWidget):
 		self.gumussuyu_check = QCheckBox('Gumussuyu', self)
 		self.taskisla_check = QCheckBox('Taskisla', self)
 
+		self.kontenjan_check = QCheckBox('Kontenjana dikkat et', self)
+
 		self.crn_input_text = QLabel("CRN'leri virgul ile ayirarak giriniz:", self)
 		self.crn_input = QLineEdit(self)
 
@@ -73,7 +75,8 @@ class App(QWidget):
 		self.layout = QGridLayout()
 		self.layout.addWidget(self.main_menu, 0, 0, 1, 10)
 		self.layout.addWidget(self.dersKoduLbl, 1, 0, 1, 2)
-		self.layout.addWidget(self.dersKoduInput, 1, 2, 1, 2)
+		self.layout.addWidget(self.dersKoduInput, 1, 2, 1, 2)		
+		self.layout.addWidget(self.kontenjan_check, 1, 6, 1, 2)
 		self.layout.addWidget(self.kampus_lbl, 2, 0, 1, 10)
 		self.layout.addWidget(self.ayazaga_check, 3, 0, 1, 2)
 		self.layout.addWidget(self.macka_check, 3, 2, 1, 2)
@@ -278,7 +281,7 @@ class App(QWidget):
 			dersler_gonderilecek.extend(func.tek_ders_hoca_eleme(gonderilecek_hoca, dersler_hoca_elenecek))
 
 		dersler_gonderilecek.extend(istenen_crn_dersler)
-		programdaki_dersler, ders_sayisi = func.program_olustur(bolum, func.karistir(dersler_gonderilecek), app = self)
+		programdaki_dersler, ders_sayisi = func.program_olustur(bolum, func.karistir(dersler_gonderilecek), app = self, kontenjan = self.kontenjan_check.isChecked())
 
 		if programdaki_dersler == None or len(programdaki_dersler) == 0:
 			self.tabloyuTemizle()

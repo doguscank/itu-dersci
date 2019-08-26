@@ -1,4 +1,4 @@
 13474;LAT 147;Hale  Karakas;0;40;['Cuma '];['0930/1229 '];['YDRAP '];SMT;['MKB']
-13464;LAT 161;Yasemin  Yilmaz Yuksek;0;40;['Carsamba '];['0930/1229 '];['D450 '];['SMT', ' STP'];['MKB']
-13465;LAT 173;Sukriye  Yuksel Filiz;0;40;['Pazartesi '];['1330/1629 '];['451 '];SMT;['MKB']
+13464;LAT 161;Yasemin  Yilmaz Yuksek;1;40;['Carsamba '];['0930/1229 '];['D450 '];['SMT', ' STP'];['MKB']
+13465;LAT 173;Sukriye  Yuksel Filiz;1;40;['Pazartesi '];['1330/1629 '];['451 '];SMT;['MKB']
 13473;LAT 215;Ruveyde  Oder;0;40;['Sali '];['1330/1629 '];['459 '];SMT;['MKB']

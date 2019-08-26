@@ -1,1 +1,1 @@
-12654;ESL 101;Sabiha Bahar Arici;0;25;['Persembe '];['0930/1229 '];['--- '];['SEK', ' SIS'];['---']
+12654;ESL 101;Sabiha Bahar Arici;3;25;['Persembe '];['0930/1229 '];['--- '];['SEK', ' SIS'];['---']
