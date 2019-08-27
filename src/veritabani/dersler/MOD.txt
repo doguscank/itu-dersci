@@ -9,5 +9,5 @@
 13468;MOD 243;Belgin  Gorgun;0;40;['Pazartesi ', 'Carsamba '];['1330/1629 ', '0930/1229 '];['453 ', '453 '];SMT;['MKB', 'MKB']
 13483;MOD 304;Belgin  Gorgun;2;40;['Persembe '];['1330/1629 '];['459 '];SMT;['MKB']
 13482;MOD 308;Belgin  Gorgun, Sukriye  Yuksel Filiz;2;40;['Pazartesi ', 'Pazartesi ', 'Carsamba ', 'Cuma '];['0830/0929 ', '1630/1729 ', '0830/0929 ', '1630/1729 '];['YDRAP ', 'YDRAP ', 'YDRAP ', 'YDRAP '];SMT;['MKB', 'MKB', 'MKB', 'MKB']
-13479;MOD 357;Cevza  Candan, Belgin  Gorgun;2;40;['Persembe ', 'Cuma '];['0830/1129 ', '0830/1129 '];['--- ', '--- '];SMT;['MKB', 'MKB']
+13479;MOD 357;Cevza  Candan, Belgin  Gorgun;2;40;['Persembe ', 'Cuma '];['0830/1129 ', '0830/1129 '];['YDRAP ', '453 '];SMT;['MKB', 'MKB']
 14754;MOD 359;Sukriye  Yuksel Filiz, Nihan  Topaloglu;2;40;['Sali '];['1330/1729 '];['451 '];SMT;['MKB']

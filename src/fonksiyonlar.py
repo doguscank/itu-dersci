@@ -248,7 +248,7 @@ def program_olustur(bolum, dersler, app = None, kontenjan = False):
 				alabilir = True
 
 			if kontenjan:
-				alabilir = alabilir & (_ders.dolu_kontenjan < _ders.kontenjan)
+				alabilir = alabilir & (int(_ders.dolu_kontenjan) < int(_ders.kontenjan))
 
 			if alabilir:	
 				if _ders.ad in eklenen_dersler.adlar:

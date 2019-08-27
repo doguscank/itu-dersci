@@ -1,1 +1,1 @@
-14829;TDW 201;Erdem  Ucer;20;45;['Cuma '];['1630/1829 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']
+14829;TDW 201;Erdem  Ucer;22;45;['Cuma '];['1630/1829 '];['--- '];['DUIK', ' GEMK', ' GMIK', ' MEN', ' MTM', ' NAE'];['DZB']

@@ -76,7 +76,9 @@ class App(QWidget):
 						else:
 							alternatif_dersler.append(ders)
 
-			return alternatif_dersler
+			ayazaga_dersler = func.kampus_secme(alternatif_dersler, [0])
+
+			return ayazaga_dersler
 
 		else:
 			popup_olustur('Lutfen gecerli CRN giriniz!', 'Tamam', 'CRN')
