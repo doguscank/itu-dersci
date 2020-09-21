@@ -85,7 +85,10 @@ def db_guncelle(ders_guncellenecek = False, guncellenecek_dersler = None):
 				for i in range(gun_sayisi):
 					ders.gunler.append(duzeltme(td_list[5].contents[2 * i]))
 					ders.saatler.append(duzeltme(td_list[6].contents[2 * i]))
-					ders.siniflar.append(duzeltme(td_list[7].contents[2 * i]))
+					try:
+						ders.siniflar.append(duzeltme(td_list[7].contents[2 * i]))
+					except:
+						pass
 
 				if not td_list[11].string is None:
 					if ',' in td_list[11].string:

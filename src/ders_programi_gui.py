@@ -301,7 +301,7 @@ class App(QWidget):
 
 	@pyqtSlot()
 	def cboxEkleme(self):
-		if self.cboxSayisi <= 10:
+		if self.cboxSayisi <= 15:
 			self.comboboxEkle()
 		else:
 			print("Maksimum ders sayisina ulasildi!")

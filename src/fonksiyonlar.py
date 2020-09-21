@@ -240,6 +240,13 @@ def program_olustur(bolum, dersler, app = None, kontenjan = False):
 
 			if bolum == "":
 				alabilir = True
+			elif " " in bolum:
+				bolumler = bolum.split(" ")
+				alabilen_bolumler = ayirma(_ders.alabilen)
+				for _bolum in bolumler:
+					if _bolum.upper() in alabilen_bolumler:
+						alabilir = True
+						break
 			elif not "Tum Lisans ve Lisansustu Programlar" in _ders.alabilen:
 				alabilen_bolumler = ayirma(_ders.alabilen)
 				if bolum.upper() in alabilen_bolumler:
